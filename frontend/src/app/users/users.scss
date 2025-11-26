@@ -1,0 +1,30 @@
+/* src/app/users/users.component.scss */
+.users-card {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.add-user-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: end;
+}
+
+.add-user-form mat-form-field {
+  min-width: 200px;
+  flex: 1;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.no-data {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-style: italic;
+}

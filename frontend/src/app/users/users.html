@@ -1,0 +1,62 @@
+<!-- src/app/users/users.component.html -->
+<mat-card class="users-card">
+  <mat-card-header>
+    <mat-card-title>CampusHire Users</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <!-- Add User Form -->
+    <div class="add-user-form">
+      <mat-form-field appearance="outline">
+        <mat-label>Name (required)</mat-label>
+        <input matInput [(ngModel)]="newName" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="newEmail" type="email" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Role</mat-label>
+        <input matInput [(ngModel)]="newRole" placeholder="e.g. student, recruiter" />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="addUser()" [disabled]="!newName.trim()">
+        Add User
+      </button>
+    </div>
+
+    <br /><br />
+
+    <!-- Users Table -->
+    <table mat-table [dataSource]="users" class="mat-elevation-z2">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let user">{{ user.id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let user">{{ user.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email</th>
+        <td mat-cell *matCellDef="let user">{{ user.email || '-' }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="role">
+        <th mat-header-cell *matHeaderCellDef>Role</th>
+        <td mat-cell *matCellDef="let user">{{ user.role || '-' }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+   <div *ngIf="users.length === 0" class="no-data">
+  No users yet. Add one above!
+</div>
+  </mat-card-content>
+</mat-card>
