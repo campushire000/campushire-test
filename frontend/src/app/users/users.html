@@ -30,7 +30,7 @@
     <br /><br />
 
     <!-- Users Table -->
-    <table mat-table [dataSource]="users" class="mat-elevation-z2">
+    <table mat-table [dataSource]="users" class="mat-elevation-z2 " [style.background-color]="'gray'" >
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef>ID</th>
         <td mat-cell *matCellDef="let user">{{ user.id }}</td>

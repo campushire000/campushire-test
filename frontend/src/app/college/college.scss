@@ -1,0 +1,26 @@
+// college-form.component.scss
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.mat-mdc-card {
+  padding: 1.5rem;
+}
+
+.mat-mdc-card-actions {
+  margin-top: 2rem;
+  gap: 1rem;
+  justify-content: flex-end;
+}

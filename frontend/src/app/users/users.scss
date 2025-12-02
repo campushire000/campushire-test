@@ -28,3 +28,16 @@ table {
   color: #666;
   font-style: italic;
 }
+/* NEW STYLES FOR TABLE COLOR */
+.campus-hire-table {
+  // Target the header row within the table
+  .mat-header-row {
+    background-color: #3f51b5; /* Use your theme's Primary color variable here */
+  }
+
+  // Target the header cells to ensure text is visible
+  .mat-header-cell {
+    color: white; /* Text color for contrast */
+    font-weight: 600;
+  }
+}

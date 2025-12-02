@@ -1,12 +1,13 @@
+// src/app/app.ts
 import { Component } from '@angular/core';
-import { UsersComponent } from './users/users';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [UsersComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.scss',
+  styleUrl: './app.scss'
 })
 export class AppComponent {
   title = 'CampusHire';
