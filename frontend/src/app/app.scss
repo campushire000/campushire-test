@@ -9,6 +9,10 @@ html, body {
     transition: 0.5s;
     padding-left: 285px; // Width of the sidebar
 
+    &.active {
+        padding-left: 85px;
+    }
+
     .main-content-container {
         padding: 115px 25px 25px; // Top padding > header height (approx 85px) + spacing
         min-height: 100vh;

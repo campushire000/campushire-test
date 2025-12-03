@@ -2,7 +2,7 @@
     transition: var(--transition);
     padding: 20px 25px;
     position: fixed;
-    left: 285px;
+    left: 310px;
     right: 25px;
     z-index: 22;
     top: 0;
@@ -232,18 +232,18 @@
         }
     }
     &.active {
-        left: 85px;
+        left: 110px;
     }
     &.right-sidebar {
         left: 25px;
-        right: 285px;
+        right: 310px;
 
         &.active {
-            right: 85px;
+            right: 110px;
         }
         &.hide-sidebar {
             left: 25px;
-            right: 85px;
+            right: 110px;
         }
     }
     &.hide-sidebar {

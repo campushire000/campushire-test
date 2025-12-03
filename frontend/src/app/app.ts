@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AsyncPipe } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
@@ -13,7 +14,8 @@ import { ToggleService } from './common/header/toggle.service';
     RouterOutlet,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    AsyncPipe
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

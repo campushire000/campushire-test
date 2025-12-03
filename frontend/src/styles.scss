@@ -18,6 +18,8 @@ html {
 }
 
 /* You can add global styles to this file, and also import other style files */
+@import 'remixicon/fonts/remixicon.css';
+@import './app/fonts/flaticon_tagus.css';
 :root {
     --fontFamily: 'Open Sans', sans-serif;
     --headingFontFamily: 'Raleway', sans-serif;

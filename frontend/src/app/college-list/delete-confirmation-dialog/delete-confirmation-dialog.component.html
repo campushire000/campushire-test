@@ -1,0 +1,9 @@
+<h2 mat-dialog-title>Delete Confirmation</h2>
+<mat-dialog-content>
+  <p>Are you sure you want to delete the following college?</p>
+  <p><strong>{{data.collegeName}} - {{data.city}}</strong></p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button class="cancel-btn" (click)="onNoClick()">Cancel</button>
+  <button mat-raised-button class="confirm-btn" (click)="onConfirmClick()">Delete</button>
+</mat-dialog-actions>

@@ -1,6 +1,6 @@
 <app-sidebar></app-sidebar>
 
-<div class="main-content-area">
+<div class="main-content-area" [class.active]="toggleService.isToggled$ | async">
     <app-header></app-header>
     
     <div class="main-content-container">
