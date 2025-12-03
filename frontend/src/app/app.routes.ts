@@ -2,10 +2,21 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'colleges', pathMatch: 'full' },
-
-  // THIS WAS YOUR PROBLEM — WRONG PATH!
-   {
+  { path: '', redirectTo: 'dashboard/analytics', pathMatch: 'full' },
+  {
+      path: 'dashboard',
+      children: [
+          {
+              path: 'analytics',
+              loadComponent: () => import('./dashboard/analytics/analytics.component').then(m => m.AnalyticsComponent)
+          }
+      ]
+  },
+  {
+    path: 'contacts',
+    loadComponent: () => import('./apps/contacts/contacts.component').then(m => m.ContactsComponent)
+  },
+  {
     path: 'users',
     loadComponent: () => import('./users/users')
       .then(m => m.UsersComponent)
@@ -29,5 +40,5 @@ export const routes: Routes = [
       .then(m => m.CollegeFormComponent)
   },
 
-  { path: '**', redirectTo: 'colleges' }
+  { path: '**', redirectTo: 'dashboard/analytics' }
 ];

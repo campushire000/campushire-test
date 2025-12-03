@@ -1,3 +1,11 @@
-<!-- src/app/app.html -->
-<h1>Welcome to CampusHire Platform</h1>
-<router-outlet></router-outlet>
+<app-sidebar></app-sidebar>
+
+<div class="main-content-area">
+    <app-header></app-header>
+    
+    <div class="main-content-container">
+        <router-outlet></router-outlet>
+    </div>
+
+    <app-footer></app-footer>
+</div>

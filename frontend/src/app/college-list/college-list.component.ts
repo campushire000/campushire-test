@@ -24,6 +24,7 @@ import { CollegeService, College } from '../services/college';
         <button mat-raised-button color="primary" routerLink="/colleges/new">
           Add New College
         </button>
+       
       </div>
 
       <div *ngIf="colleges.length === 0" class="empty">
