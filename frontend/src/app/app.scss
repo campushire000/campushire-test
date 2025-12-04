@@ -7,10 +7,10 @@ html, body {
 // Main Content Area
 .main-content-area {
     transition: 0.5s;
-    padding-left: 285px; // Width of the sidebar
+    padding-left: 260px; // Width of the sidebar
 
     &.active {
-        padding-left: 85px;
+        padding-left: 60px;
     }
 
     .main-content-container {

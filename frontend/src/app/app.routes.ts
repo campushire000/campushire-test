@@ -40,5 +40,11 @@ export const routes: Routes = [
       .then(m => m.CollegeFormComponent)
   },
 
+  {
+    path: 'students',
+    loadComponent: () => import('./student-list/student-list.component')
+      .then(m => m.StudentListComponent)
+  },
+
   { path: '**', redirectTo: 'dashboard/analytics' }
 ];

@@ -6,6 +6,15 @@
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
 
+@use 'remixicon/fonts/remixicon.css';
+@use './app/fonts/flaticon_tagus.css';
+@use '../node_modules/quill/dist/quill.snow.css';
+@use './app/utilities';
+@use './app/ui-kit';
+@use './app/form';
+@use './app/sidebar';
+
+
 html {
     @include mat.theme((
         color: (
@@ -18,8 +27,7 @@ html {
 }
 
 /* You can add global styles to this file, and also import other style files */
-@import 'remixicon/fonts/remixicon.css';
-@import './app/fonts/flaticon_tagus.css';
+
 :root {
     --fontFamily: 'Open Sans', sans-serif;
     --headingFontFamily: 'Raleway', sans-serif;
@@ -153,17 +161,9 @@ button {
     }
 }
 
-// Quill
-@import '../node_modules/quill/dist/quill.snow.css';
 
-// Utilities CSS
-@import "./app/utilities";
 
-// UI Kit CSS
-@import "./app/ui-kit";
 
-// Form
-@import "./app/form";
 
 // Header CSS
 .header-area {
@@ -491,8 +491,7 @@ button {
     }
 }
 
-// Sidemenu CSS
-@import "./app/sidebar";
+
 
 // Mat Card CSS
 .mat-mdc-card {

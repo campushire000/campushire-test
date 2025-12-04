@@ -1,0 +1,140 @@
+.breadcrumb-card {
+    background-color: #fff;
+    padding: 20px 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+
+    h5 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .breadcrumb {
+        .breadcrumb-item {
+            font-size: 14px;
+            color: #777;
+
+            a {
+                color: #777;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+
+                i {
+                    margin-right: 5px;
+                    font-size: 16px;
+                }
+
+                &:hover {
+                    color: var(--mainColor);
+                }
+            }
+
+            &.fw-semibold {
+                font-weight: 600;
+                color: var(--mainColor);
+            }
+        }
+    }
+}
+
+.tagus-card {
+    margin-bottom: 25px;
+
+    .mat-mdc-card-header {
+        padding: 20px 25px;
+        border-bottom: 1px solid #eee;
+        display: block;
+
+        h5 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+
+    .mat-mdc-card-content {
+        padding: 25px;
+    }
+}
+
+.tagus-form-group {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    mat-form-field {
+        flex: 1;
+        min-width: 200px;
+    }
+}
+
+.tagus-mat-table {
+    overflow-x: auto;
+
+    table {
+        width: 100%;
+    }
+
+    .mat-mdc-header-cell,
+    .mat-mdc-cell {
+        padding: 0 4px; // Reduced padding
+        font-size: 12px; // Slightly smaller font
+
+        &:first-of-type {
+            padding-left: 10px;
+        }
+
+        &:last-of-type {
+            padding-right: 10px;
+        }
+    }
+
+    .mat-mdc-header-cell {
+        font-weight: 600;
+        background-color: #f9f9f9;
+        height: 40px;
+    }
+
+    .mat-mdc-cell {
+        min-height: 35px; // Use min-height to allow expansion
+        height: auto;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    // Column specific styles
+    .mat-column-student_name {
+        width: 200px;
+        max-width: 200px;
+        text-align: left !important; // Force left alignment
+
+        ::ng-deep .mat-sort-header-container {
+            justify-content: flex-start !important; // Align header content left
+            margin-left: 10px;
+        }
+    }
+
+    .mat-column-action {
+        width: 100px;
+        text-align: center;
+    }
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+
+    &.active {
+        background-color: rgba(0, 128, 0, 0.1);
+        color: green;
+    }
+
+    &.inactive {
+        background-color: rgba(255, 0, 0, 0.1);
+        color: red;
+    }
+}
