@@ -40,7 +40,16 @@ import { DeleteConfirmationDialogComponent } from './delete-company-dialog/delet
   styleUrls: ['./company-list.scss']
 })
 export class CompanyListComponent implements OnInit, AfterViewInit {
-  displayedColumns: string[] = ['status', 'company_name', 'company_type', 'email', 'contact_person_mobile', 'city', 'action'];
+displayedColumns: string[] = [
+  'company_code',
+  'company_name',
+  'company_shortname',
+  'company_type',
+  'email',
+  'mobile',
+  'city',
+  'action'
+];
   dataSource = new MatTableDataSource<Company>([]);
   selection = new SelectionModel<Company>(true, []);
 
@@ -136,9 +145,9 @@ export class CompanyListComponent implements OnInit, AfterViewInit {
     });
   }
 
-  toggleStatus(company: Company) {
-    const newStatus = company.status === 1 ? 0 : 1;
-    const updatedCompany = { ...company, status: newStatus };
-    this.updateCompany(company._id!, updatedCompany);
-  }
-}
+//   toggleStatus(company: Company) {
+//     const newStatus = company.status === 1 ? 0 : 1;
+//     const updatedCompany = { ...company, status: newStatus };
+//     this.updateCompany(company._id!, updatedCompany);
+//   }
+ }

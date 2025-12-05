@@ -1,7 +1,17 @@
 export class CreateCompanyDto {
-  status: number;
   company_name: string;
+  company_shortname: string;
+  company_code: string;
+  company_type: string;
+
   email: string;
+  website: string;
+
   mobile: string;
-  website?: string;
+  contact_mobile: string;
+  contact_email: string;
+
+  country: string;
+  state: string;
+  city: string;
 }

@@ -1,4 +1,17 @@
-import { PartialType } from '@nestjs/mapped-types';
-import { CreateCompanyDto } from './create-company.dto';
+export class UpdateCompanyDto {
+  company_name?: string;
+  company_shortname?: string;
+  company_code?: string;
+  company_type?: string;
 
-export class UpdateCompanyDto extends PartialType(CreateCompanyDto) {}
+  email?: string;
+  website?: string;
+
+  mobile?: string;
+  contact_mobile?: string;
+  contact_email?: string;
+
+  country?: string;
+  state?: string;
+  city?: string;
+}

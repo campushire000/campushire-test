@@ -4,21 +4,24 @@ import { Observable } from 'rxjs';
 
 export interface Company {
   _id?: string;
-  status: number;
+
   company_name: string;
-  email: string;
+  company_shortname: string;
+  company_code: string;
   company_type: string;
+
+  email: string;
+  website: string;
+
+  mobile: string;
+  contact_mobile: string;
+  contact_email: string;
+
   country: string;
   state: string;
   city: string;
-  pincode: string;
-  contact_person_mobile: string;
-  contact_person_email: string;
-  website?: string;
-  contact_person_name?: string;
-  about?: string;
-  address_line?: string;
 }
+
 
 @Injectable({
   providedIn: 'root'
