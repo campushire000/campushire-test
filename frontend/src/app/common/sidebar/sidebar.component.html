@@ -67,7 +67,38 @@
                             </li>
                         </ul>
                     </mat-expansion-panel>
+
                     <span class="sub-title gray-color">APPS</span>
+                    <a routerLink="/students" class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <i class="flaticon-user-1"></i>
+                        <span class="title">Students</span>
+                    </a>
+                       <a routerLink="/colleges" class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <i class="flaticon-user-1"></i>
+                        <span class="title">Colleges</span>
+                    </a>
+                       <a routerLink="/companies" class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <i class="flaticon-user-1"></i>
+                        <span class="title">Companies</span>
+                    </a>
+                    <a routerLink="/contacts" class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <i class="flaticon-user-1"></i>
+                        <span class="title">Contacts</span>
+                        
+                    </a>
+                    
+                         <a routerLink="/users" class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <i class="flaticon-user-1"></i>
+                        <span class="title">Users</span>
+                    </a>
+
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = true">
+                        <mat-expansion-panel-header>
+                            <span class="sub-title gray-color">TAGUS</span>
+                            </mat-expansion-panel-header>
+
+                        
+                    
                     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = true">
                         <mat-expansion-panel-header>
                             <mat-panel-title>
@@ -127,27 +158,7 @@
                         <i class="flaticon-calendar"></i>
                         <span class="title">Calendar</span>
                     </a>
-                    <a routerLink="/contacts" class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                        <i class="flaticon-user-1"></i>
-                        <span class="title">Contacts</span>
-                        
-                    </a>
-                    <a routerLink="/students" class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                        <i class="flaticon-user-1"></i>
-                        <span class="title">Students</span>
-                    </a>
-                       <a routerLink="/colleges" class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                        <i class="flaticon-user-1"></i>
-                        <span class="title">Colleges</span>
-                    </a>
-                       <a routerLink="/companies" class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                        <i class="flaticon-user-1"></i>
-                        <span class="title">Companies</span>
-                    </a>
-                         <a routerLink="/users" class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                        <i class="flaticon-user-1"></i>
-                        <span class="title">Users</span>
-                    </a>
+                    
                     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = true">
                         <mat-expansion-panel-header>
                             <mat-panel-title>
@@ -177,7 +188,7 @@
                         <i class="flaticon-comment"></i>
                         <span class="title">Chat</span>
                     </a>
-                    <span class="sub-title gray-color">PAGES</span>
+
                     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = true">
                         <mat-expansion-panel-header>
                             <mat-panel-title>
@@ -917,6 +928,11 @@
                         <i class="flaticon-tools"></i>
                         <span class="title">Logout</span>
                     </a>
+                    
+                    </mat-expansion-panel>
+
+                    <!-- <span class="sub-title gray-color">PAGES</span> -->
+                    
                 </mat-accordion>
             </div>
         </div>
