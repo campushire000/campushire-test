@@ -41,9 +41,16 @@ export const routes: Routes = [
   },
 
   {
+
     path: 'students',
     loadComponent: () => import('./student-list/student-list.component')
       .then(m => m.StudentListComponent)
+  },
+  {
+    path: 'companies',
+    loadComponent: () => import('./company-list/company-list')
+      .then(m => m.CompanyListComponent)
+
   },
 
   { path: '**', redirectTo: 'dashboard/analytics' }
