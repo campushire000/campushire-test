@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+import { environment } from '../../environments/environment';
+
 export interface Company {
   _id?: string;
   status: number;
@@ -24,9 +26,9 @@ export interface Company {
   providedIn: 'root'
 })
 export class CompanyService {
-  private apiUrl = 'http://localhost:3000/companies'; // replace with your backend URL
+  private apiUrl = environment.apiUrl + '/companies';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getCompanies(): Observable<Company[]> {
     return this.http.get<Company[]>(this.apiUrl);
