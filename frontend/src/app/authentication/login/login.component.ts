@@ -9,6 +9,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { CommonModule } from '@angular/common';
+import { environment } from '../../../environments/environment';
 
 @Component({
     selector: 'app-login',
@@ -65,11 +66,11 @@ export class LoginComponent implements OnInit {
     }
 
     loginWithGoogle() {
-        window.location.href = 'http://localhost:3000/auth/google';
+        window.location.href = `${environment.apiUrl}/auth/google`;
     }
 
     loginWithFacebook() {
-        window.location.href = 'http://localhost:3000/auth/facebook';
+        window.location.href = `${environment.apiUrl}/auth/facebook`;
     }
 
     toggleTheme() {
