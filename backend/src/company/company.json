@@ -1,0 +1,172 @@
+[
+  {
+    "_id": "5a7b2baa0226a637cab9178e",
+    "website": "www.iquasar.com",
+    "mobile": "8042038790",
+    "email": "info@iquasar.com",
+    "company_name": "iQuasar",
+    "status": 1
+  },
+  {
+    "_id": "5a7b2baa0226a637cab91793",
+    "website": "www.fuluchrum.com",
+    "mobile": "9122-66756270",
+    "email": "sales@ntranga.com",
+    "company_name": "fulchrum test2",
+    "status": 1,
+    "company_type": "IT",
+    "contact_person_name": "Murali VK",
+    "contact_person_mobile": "08281400487",
+    "contact_person_email": "murali1511@gmail.com",
+    "address_line": "Muralika house",
+    "city": "vatakara",
+    "state": "KERALA",
+    "country": "India",
+    "pincode": "673503",
+    "about": "test"
+  },
+  {
+    "_id": "5a7b2baa0226a637cab91798",
+    "website": "www.SoftwareFileProtection.com",
+    "mobile": "919348518777/9676520240",
+    "email": "mail@isohelpline.com",
+    "company_name": "Innovative Matrix Softech Pvt. Ltd.",
+    "status": 1
+  },
+  {
+    "_id": "5a7b2baa0226a637cab9179d",
+    "website": "www.procuretiger.com,tendertiger.com",
+    "mobile": "9099056690/9099059251",
+    "email": "info@procuretiger.com",
+    "company_name": "e-Procurement Technologies Limited",
+    "status": 0
+  },
+  {
+    "_id": "5a7b2baa0226a637cab917a7",
+    "website": "www.cyfuture.com",
+    "mobile": "8041306341",
+    "email": "sales@cyfuture.com",
+    "company_name": "Cyfuture India Pvt Ltd",
+    "status": 1
+  },
+  {
+    "_id": "5a7b2baa0226a637cab917c0",
+    "website": "",
+    "mobile": "080-2899327",
+    "email": "",
+    "company_name": "Acme Insurance Services Pvt Ltd",
+    "status": 0
+  },
+  {
+    "_id": "5a7b2baa0226a637cab917d9",
+    "website": "www.bluechipsw.com/",
+    "mobile": "(9180)2573-1603,2573-1604,2573-1605",
+    "email": "",
+    "company_name": "Blue Chip Computer Consultants Pvt Ltd",
+    "status": 1
+  },
+  {
+    "_id": "5a7b2baa0226a637cab917f2",
+    "website": "www.crimsonlogic.com/",
+    "mobile": "8067709500",
+    "email": "india@crimsonlogic.com",
+    "company_name": "CrimsonLogic India Pvt Ltd",
+    "status": 0
+  },
+  {
+    "_id": "5a7b2baa0226a637cab9180b",
+    "website": "",
+    "mobile": "918025522059",
+    "email": "",
+    "company_name": "GCI Solutions Pvt Ltd",
+    "status": 1
+  },
+  {
+    "_id": "5a7b2baa0226a637cab91794",
+    "website": "www.yuasta.com",
+    "mobile": "911412792201",
+    "email": "info@yusata.com",
+    "company_name": "Yusata Infotech Pvt. Ltd.",
+    "status": 0
+  },
+  {
+    "_id": "5a7b2baa0226a637cab917ad",
+    "website": "www.astTECHS.COM",
+    "mobile": "91-8066406640",
+    "email": "",
+    "company_name": "iTECHS Communications pvt.Ltd",
+    "status": 1
+  },
+  {
+    "_id": "5a7b2baa0226a637cab917c6",
+    "website": "www.ajax.in",
+    "mobile": "80)23535156,(91+80)23634881",
+    "email": "ajax@ajax.in",
+    "company_name": "Ajax.com Pvt Ltd",
+    "status": 0
+  },
+  {
+    "_id": "5a7b2baa0226a637cab917df",
+    "website": "",
+    "mobile": "91.80.4184.1111,5520.1111",
+    "email": "",
+    "company_name": "Cadence Design Systems India Pvt. Ltd",
+    "status": 1
+  },
+  {
+    "_id": "5a7b2baa0226a637cab917f8",
+    "website": "www.consultdawn.com/",
+    "mobile": "(80)41142626",
+    "email": "info@dawnconsulting.com",
+    "company_name": "Dawn Consulting",
+    "status": 0
+  },
+  {
+    "_id": "5a7b2baa0226a637cab91811",
+    "website": "",
+    "mobile": "91-80-41189100",
+    "email": "",
+    "company_name": "Harita Infoserve Ltd",
+    "status": 1
+  },
+  {
+    "_id": "5a7b2baa0226a637cab9179f",
+    "website": "www.epson.co.in",
+    "mobile": "8030515000",
+    "email": "",
+    "company_name": "EPSON INDIA Pvt Ltd",
+    "status": 0
+  },
+  {
+    "_id": "5a7b2baa0226a637cab917b8",
+    "website": "www.avekshaa.com",
+    "mobile": "(080)25722294",
+    "email": "www.avekshaa.com",
+    "company_name": "Avekshaa Technologies Pvt Ltd",
+    "status": 1
+  },
+  {
+    "_id": "5a7b2baa0226a637cab917d1",
+    "website": "",
+    "mobile": "8025539232",
+    "email": "",
+    "company_name": "Axes Technologies (I) Pvt Ltd",
+    "status": 0
+  },
+  {
+    "_id": "5a7b2baa0226a637cab917ea",
+    "website": "www.citigroup.com/",
+    "mobile": "-080-25320401",
+    "email": "",
+    "company_name": "Citigroup Information Technology Operations and Solutions Ltd",
+    "status": 1
+  },
+  {
+    "_id": "5a7b2baa0226a637cab91803",
+    "website": "www.elitecore.com/",
+    "mobile": "-80-41517880/81",
+    "email": "",
+    "company_name": "Elitecore Technologies Ltd",
+    "status": 0
+  }
+]

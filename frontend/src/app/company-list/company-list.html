@@ -1,0 +1,93 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Company List</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item fw-semibold">Company List</li>
+    </ol>
+</div>
+
+<mat-card class="mb-25 tagus-card" [class.component-dark-theme]="themeService.isDark()">
+    <mat-card-header>
+        <div class="d-flex align-items-center justify-content-space-between w-100">
+            <h5 class="mb-0">All Companies</h5>
+            <button mat-flat-button class="default-btn tagus" (click)="openCompanyDialog()">
+                <i class="ri-add-fill"></i> Add New Company
+            </button>
+        </div>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="tagus-form-group">
+            <mat-form-field appearance="fill">
+                <i class="ri-search-line"></i>
+                <mat-label>Filter</mat-label>
+                <input matInput (keyup)="applyFilter($event)" placeholder="Ex. IT" #input>
+            </mat-form-field>
+        </div>
+        <div class="mat-elevation-z8 tagus-mat-table">
+            <table mat-table [dataSource]="dataSource" matSort>
+                <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+                    <td mat-cell *matCellDef="let element">
+                        <span class="badge" [ngClass]="element.status === 1 ? 'active' : 'inactive'">
+                            {{element.status === 1 ? 'Active' : 'Inactive'}}
+                        </span>
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="company_name">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Company Name</th>
+                    <td mat-cell *matCellDef="let element">{{element.company_name}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="company_type">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Type</th>
+                    <td mat-cell *matCellDef="let element">{{element.company_type}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="email">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+                    <td mat-cell *matCellDef="let element">{{element.email}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="contact_person_mobile">
+                    <th mat-header-cell *matHeaderCellDef>Mobile</th>
+                    <td mat-cell *matCellDef="let element">{{element.contact_person_mobile}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="city">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>City</th>
+                    <td mat-cell *matCellDef="let element">{{element.city}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef>Action</th>
+                    <td mat-cell *matCellDef="let element">
+                        <button mat-icon-button color="primary" (click)="openCompanyDialog(element)" matTooltip="Edit">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button color="warn" (click)="deleteCompany(element)" matTooltip="Delete">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        <button mat-icon-button (click)="toggleStatus(element)" 
+                                [color]="element.status === 1 ? 'warn' : 'primary'" 
+                                [matTooltip]="element.status === 1 ? 'Deactivate' : 'Activate'">
+                            <mat-icon>{{element.status === 1 ? 'block' : 'check_circle'}}</mat-icon>
+                        </button>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                <tr class="mat-row" *matNoDataRow>
+                    <td class="mat-cell" colspan="7">No data matching the filter "{{input.value}}"</td>
+                </tr>
+            </table>
+        </div>
+        <mat-paginator [pageSizeOptions]="[10, 20, 30]" showFirstLastButtons></mat-paginator>
+    </mat-card-content>
+</mat-card>

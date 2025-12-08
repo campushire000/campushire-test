@@ -1,0 +1,27 @@
+import { Module } from '@nestjs/common';
+import { AuthService } from './auth.service';
+import { AuthController } from './auth.controller';
+import { UsersModule } from '../users/users.module';
+import { PassportModule } from '@nestjs/passport';
+import { JwtModule } from '@nestjs/jwt';
+import { LocalStrategy } from './strategies/local.strategy';
+import { JwtStrategy } from './strategies/jwt.strategy';
+import { GoogleStrategy } from './strategies/google.strategy';
+import { FacebookStrategy } from './strategies/facebook.strategy';
+
+import { RolesGuard } from './guards/roles.guard';
+
+@Module({
+  imports: [
+    UsersModule,
+    PassportModule,
+    JwtModule.register({
+      secret: 'secretKey', // In production, use environment variable
+      signOptions: { expiresIn: '60m' },
+    }),
+  ],
+  providers: [AuthService, LocalStrategy, JwtStrategy, GoogleStrategy, FacebookStrategy, RolesGuard],
+  controllers: [AuthController],
+  exports: [AuthService, RolesGuard],
+})
+export class AuthModule { }

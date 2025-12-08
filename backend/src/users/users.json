@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "278b745d-f52b-4178-8b73-c7f33b691283",
+    "name": "Murali",
+    "email": "murali1511@gmail.com",
+    "password": "$2b$10$VMBiwW2UY4BnFdokSKJ1yOzHz6L1G9fU.9ag7WpgnylUHkHAChorq",
+    "status": 1,
+    "role": "student",
+    "__v": 0
+  },
+  {
+    "_id": "f6171f83-8727-4d45-beb1-6eeea1648f66",
+    "name": "Valakandy",
+    "email": "test2@example.com",
+    "password": "$2b$10$ySA665x0xUz85mr9C7UtF.UyoN70PSjOM38vDq1GSNlaUCdiLGjrW",
+    "status": 1,
+    "role": "admin",
+    "__v": 0
+  },
+  {
+    "_id": "37e9d2c2-7418-4a89-9e50-3a813042ca2f",
+    "name": "Test3",
+    "email": "test3@example.com",
+    "password": "$2b$10$S/R2l8VxoAByGfuS0bMkbOmpuwlOGqKGHx412p8LOaCV9JLDAKibu",
+    "status": 1,
+    "role": "student",
+    "__v": 0
+  }
+]

@@ -1,0 +1,2072 @@
+[33m❯[39m Building...
+[32m✔[39m Building...
+Application bundle generation failed. [15.573 seconds] - 2025-12-03T05:52:09.692Z
+
+[1m[33m[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mDeprecation[0m [1m[35m[plugin angular-sass][0m
+
+    src/styles.scss:158:8:
+[37m      158 │ @import [32m[37m"./utilities";
+          ╵         [32m^[0m
+
+
+  Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  
+  More info and automated migrator: [4mhttps://sass-lang.com/d/import[0m
+
+  The plugin "angular-sass" was triggered by this import
+
+    angular:styles/global:styles:1:8:
+[37m      1 │ @import [32m'src/styles.scss'[37m;
+        ╵         [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mDeprecation[0m [1m[35m[plugin angular-sass][0m
+
+    src/styles.scss:161:8:
+[37m      161 │ @import [32m[37m"./ui-kit";
+          ╵         [32m^[0m
+
+
+  Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  
+  More info and automated migrator: [4mhttps://sass-lang.com/d/import[0m
+
+  The plugin "angular-sass" was triggered by this import
+
+    angular:styles/global:styles:1:8:
+[37m      1 │ @import [32m'src/styles.scss'[37m;
+        ╵         [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mDeprecation[0m [1m[35m[plugin angular-sass][0m
+
+    src/styles.scss:164:8:
+[37m      164 │ @import [32m[37m"./form";
+          ╵         [32m^[0m
+
+
+  Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  
+  More info and automated migrator: [4mhttps://sass-lang.com/d/import[0m
+
+  The plugin "angular-sass" was triggered by this import
+
+    angular:styles/global:styles:1:8:
+[37m      1 │ @import [32m'src/styles.scss'[37m;
+        ╵         [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mDeprecation[0m [1m[35m[plugin angular-sass][0m
+
+    src/styles.scss:493:8:
+[37m      493 │ @import [32m[37m"./sidebar";
+          ╵         [32m^[0m
+
+
+  Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  
+  More info and automated migrator: [4mhttps://sass-lang.com/d/import[0m
+
+  The plugin "angular-sass" was triggered by this import
+
+    angular:styles/global:styles:1:8:
+[37m      1 │ @import [32m'src/styles.scss'[37m;
+        ╵         [32m~~~~~~~~~~~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/confirm-mail/confirm-mail.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component ConfirmMailComponent.
+
+    src/app/authentication/confirm-mail/confirm-mail.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./confirm-mail.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorder' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/confirm-mail/confirm-mail.component.html:4:45:
+[37m      4 │     [class.card-borderd-theme]="themeService.[32misCardBorder[37m()"
+        ╵                                              [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component ConfirmMailComponent.
+
+    src/app/authentication/confirm-mail/confirm-mail.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./confirm-mail.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorderRadius' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/confirm-mail/confirm-mail.component.html:5:45:
+[37m      5 │     [class.card-border-radius]="themeService.[32misCardBorderRadius[37m()"
+        ╵                                              [32m~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component ConfirmMailComponent.
+
+    src/app/authentication/confirm-mail/confirm-mail.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./confirm-mail.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/confirm-mail/confirm-mail.component.ts:23:26:
+[37m      23 │         this.themeService.[32mtoggleCardBorderTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderRadiusTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/confirm-mail/confirm-mail.component.ts:27:26:
+[37m      27 │         this.themeService.[32mtoggleCardBorderRadiusTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/forgot-password/forgot-password.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component ForgotPasswordComponent.
+
+    src/app/authentication/forgot-password/forgot-password.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./forgot-password.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorder' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/forgot-password/forgot-password.component.html:4:45:
+[37m      4 │     [class.card-borderd-theme]="themeService.[32misCardBorder[37m()"
+        ╵                                              [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component ForgotPasswordComponent.
+
+    src/app/authentication/forgot-password/forgot-password.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./forgot-password.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorderRadius' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/forgot-password/forgot-password.component.html:5:45:
+[37m      5 │     [class.card-border-radius]="themeService.[32misCardBorderRadius[37m()"
+        ╵                                              [32m~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component ForgotPasswordComponent.
+
+    src/app/authentication/forgot-password/forgot-password.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./forgot-password.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/forgot-password/forgot-password.component.html:6:48:
+[37m      6 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component ForgotPasswordComponent.
+
+    src/app/authentication/forgot-password/forgot-password.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./forgot-password.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/forgot-password/forgot-password.component.ts:25:26:
+[37m      25 │         this.themeService.[32mtoggleCardBorderTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderRadiusTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/forgot-password/forgot-password.component.ts:29:26:
+[37m      29 │         this.themeService.[32mtoggleCardBorderRadiusTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/lock-screen/lock-screen.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component LockScreenComponent.
+
+    src/app/authentication/lock-screen/lock-screen.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./lock-screen.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorder' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/lock-screen/lock-screen.component.html:4:45:
+[37m      4 │     [class.card-borderd-theme]="themeService.[32misCardBorder[37m()"
+        ╵                                              [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component LockScreenComponent.
+
+    src/app/authentication/lock-screen/lock-screen.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./lock-screen.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorderRadius' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/lock-screen/lock-screen.component.html:5:45:
+[37m      5 │     [class.card-border-radius]="themeService.[32misCardBorderRadius[37m()"
+        ╵                                              [32m~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component LockScreenComponent.
+
+    src/app/authentication/lock-screen/lock-screen.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./lock-screen.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/lock-screen/lock-screen.component.html:6:48:
+[37m      6 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component LockScreenComponent.
+
+    src/app/authentication/lock-screen/lock-screen.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./lock-screen.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/lock-screen/lock-screen.component.ts:27:26:
+[37m      27 │         this.themeService.[32mtoggleCardBorderTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderRadiusTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/lock-screen/lock-screen.component.ts:31:26:
+[37m      31 │         this.themeService.[32mtoggleCardBorderRadiusTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/login/login.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component LoginComponent.
+
+    src/app/authentication/login/login.component.ts:13:17:
+[37m      13 │     templateUrl: [32m'./login.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorder' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/login/login.component.html:4:45:
+[37m      4 │     [class.card-borderd-theme]="themeService.[32misCardBorder[37m()"
+        ╵                                              [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component LoginComponent.
+
+    src/app/authentication/login/login.component.ts:13:17:
+[37m      13 │     templateUrl: [32m'./login.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorderRadius' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/login/login.component.html:5:45:
+[37m      5 │     [class.card-border-radius]="themeService.[32misCardBorderRadius[37m()"
+        ╵                                              [32m~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component LoginComponent.
+
+    src/app/authentication/login/login.component.ts:13:17:
+[37m      13 │     templateUrl: [32m'./login.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/login/login.component.html:6:48:
+[37m      6 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component LoginComponent.
+
+    src/app/authentication/login/login.component.ts:13:17:
+[37m      13 │     templateUrl: [32m'./login.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/login/login.component.ts:29:26:
+[37m      29 │         this.themeService.[32mtoggleCardBorderTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderRadiusTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/login/login.component.ts:33:26:
+[37m      33 │         this.themeService.[32mtoggleCardBorderRadiusTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/logout/logout.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component LogoutComponent.
+
+    src/app/authentication/logout/logout.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./logout.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorder' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/logout/logout.component.html:4:45:
+[37m      4 │     [class.card-borderd-theme]="themeService.[32misCardBorder[37m()"
+        ╵                                              [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component LogoutComponent.
+
+    src/app/authentication/logout/logout.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./logout.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorderRadius' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/logout/logout.component.html:5:45:
+[37m      5 │     [class.card-border-radius]="themeService.[32misCardBorderRadius[37m()"
+        ╵                                              [32m~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component LogoutComponent.
+
+    src/app/authentication/logout/logout.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./logout.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/logout/logout.component.ts:23:26:
+[37m      23 │         this.themeService.[32mtoggleCardBorderTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderRadiusTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/logout/logout.component.ts:27:26:
+[37m      27 │         this.themeService.[32mtoggleCardBorderRadiusTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/register/register.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component RegisterComponent.
+
+    src/app/authentication/register/register.component.ts:12:17:
+[37m      12 │     templateUrl: [32m'./register.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorder' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/register/register.component.html:4:45:
+[37m      4 │     [class.card-borderd-theme]="themeService.[32misCardBorder[37m()"
+        ╵                                              [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component RegisterComponent.
+
+    src/app/authentication/register/register.component.ts:12:17:
+[37m      12 │     templateUrl: [32m'./register.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorderRadius' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/register/register.component.html:5:45:
+[37m      5 │     [class.card-border-radius]="themeService.[32misCardBorderRadius[37m()"
+        ╵                                              [32m~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component RegisterComponent.
+
+    src/app/authentication/register/register.component.ts:12:17:
+[37m      12 │     templateUrl: [32m'./register.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/register/register.component.html:6:48:
+[37m      6 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component RegisterComponent.
+
+    src/app/authentication/register/register.component.ts:12:17:
+[37m      12 │     templateUrl: [32m'./register.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/register/register.component.ts:28:26:
+[37m      28 │         this.themeService.[32mtoggleCardBorderTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderRadiusTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/register/register.component.ts:32:26:
+[37m      32 │         this.themeService.[32mtoggleCardBorderRadiusTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/reset-password/reset-password.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component ResetPasswordComponent.
+
+    src/app/authentication/reset-password/reset-password.component.ts:12:17:
+[37m      12 │     templateUrl: [32m'./reset-password.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorder' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/reset-password/reset-password.component.html:4:45:
+[37m      4 │     [class.card-borderd-theme]="themeService.[32misCardBorder[37m()"
+        ╵                                              [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component ResetPasswordComponent.
+
+    src/app/authentication/reset-password/reset-password.component.ts:12:17:
+[37m      12 │     templateUrl: [32m'./reset-password.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorderRadius' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/reset-password/reset-password.component.html:5:45:
+[37m      5 │     [class.card-border-radius]="themeService.[32misCardBorderRadius[37m()"
+        ╵                                              [32m~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component ResetPasswordComponent.
+
+    src/app/authentication/reset-password/reset-password.component.ts:12:17:
+[37m      12 │     templateUrl: [32m'./reset-password.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/reset-password/reset-password.component.html:6:48:
+[37m      6 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component ResetPasswordComponent.
+
+    src/app/authentication/reset-password/reset-password.component.ts:12:17:
+[37m      12 │     templateUrl: [32m'./reset-password.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/reset-password/reset-password.component.ts:28:26:
+[37m      28 │         this.themeService.[32mtoggleCardBorderTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderRadiusTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/reset-password/reset-password.component.ts:32:26:
+[37m      32 │         this.themeService.[32mtoggleCardBorderRadiusTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/signin-signup/signin-signup.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component SigninSignupComponent.
+
+    src/app/authentication/signin-signup/signin-signup.component.ts:13:17:
+[37m      13 │     templateUrl: [32m'./signin-signup.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorder' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/signin-signup/signin-signup.component.html:4:45:
+[37m      4 │     [class.card-borderd-theme]="themeService.[32misCardBorder[37m()"
+        ╵                                              [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component SigninSignupComponent.
+
+    src/app/authentication/signin-signup/signin-signup.component.ts:13:17:
+[37m      13 │     templateUrl: [32m'./signin-signup.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorderRadius' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/signin-signup/signin-signup.component.html:5:45:
+[37m      5 │     [class.card-border-radius]="themeService.[32misCardBorderRadius[37m()"
+        ╵                                              [32m~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component SigninSignupComponent.
+
+    src/app/authentication/signin-signup/signin-signup.component.ts:13:17:
+[37m      13 │     templateUrl: [32m'./signin-signup.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/signin-signup/signin-signup.component.html:6:48:
+[37m      6 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component SigninSignupComponent.
+
+    src/app/authentication/signin-signup/signin-signup.component.ts:13:17:
+[37m      13 │     templateUrl: [32m'./signin-signup.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/signin-signup/signin-signup.component.ts:29:26:
+[37m      29 │         this.themeService.[32mtoggleCardBorderTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderRadiusTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/authentication/signin-signup/signin-signup.component.ts:33:26:
+[37m      33 │         this.themeService.[32mtoggleCardBorderRadiusTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorder' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/footer/footer.component.html:3:45:
+[37m      3 │     [class.card-borderd-theme]="themeService.[32misCardBorder[37m()"
+        ╵                                              [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component FooterComponent.
+
+    src/app/common/footer/footer.component.ts:7:17:
+[37m      7 │     templateUrl: [32m'./footer.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/footer/footer.component.html:4:47:
+[37m      4 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component FooterComponent.
+
+    src/app/common/footer/footer.component.ts:7:17:
+[37m      7 │     templateUrl: [32m'./footer.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorderRadius' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/footer/footer.component.html:5:45:
+[37m      5 │     [class.card-border-radius]="themeService.[32misCardBorderRadius[37m()"
+        ╵                                              [32m~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component FooterComponent.
+
+    src/app/common/footer/footer.component.ts:7:17:
+[37m      7 │     templateUrl: [32m'./footer.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/footer/footer.component.ts:17:26:
+[37m      17 │         this.themeService.[32mtoggleCardBorderTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderRadiusTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/footer/footer.component.ts:25:26:
+[37m      25 │         this.themeService.[32mtoggleCardBorderRadiusTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/header/header.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component HeaderComponent.
+
+    src/app/common/header/header.component.ts:13:17:
+[37m      13 │     templateUrl: [32m'./header.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isRightSidebar' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/header/header.component.html:4:40:
+[37m      4 │     [class.right-sidebar]="themeService.[32misRightSidebar[37m()"
+        ╵                                         [32m~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component HeaderComponent.
+
+    src/app/common/header/header.component.ts:13:17:
+[37m      13 │     templateUrl: [32m'./header.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isHideSidebar' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/header/header.component.html:5:39:
+[37m      5 │     [class.hide-sidebar]="themeService.[32misHideSidebar[37m()"
+        ╵                                        [32m~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component HeaderComponent.
+
+    src/app/common/header/header.component.ts:13:17:
+[37m      13 │     templateUrl: [32m'./header.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isHeaderDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/header/header.component.html:6:38:
+[37m      6 │     [class.dark-header]="themeService.[32misHeaderDark[37m()"
+        ╵                                       [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component HeaderComponent.
+
+    src/app/common/header/header.component.ts:13:17:
+[37m      13 │     templateUrl: [32m'./header.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorder' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/header/header.component.html:7:45:
+[37m      7 │     [class.card-borderd-theme]="themeService.[32misCardBorder[37m()"
+        ╵                                              [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component HeaderComponent.
+
+    src/app/common/header/header.component.ts:13:17:
+[37m      13 │     templateUrl: [32m'./header.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorderRadius' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/header/header.component.html:8:45:
+[37m      8 │     [class.card-border-radius]="themeService.[32misCardBorderRadius[37m()"
+        ╵                                              [32m~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component HeaderComponent.
+
+    src/app/common/header/header.component.ts:13:17:
+[37m      13 │     templateUrl: [32m'./header.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/header/header.component.html:9:38:
+[37m      9 │     [class.rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                       [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component HeaderComponent.
+
+    src/app/common/header/header.component.ts:13:17:
+[37m      13 │     templateUrl: [32m'./header.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleSidebarTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/header/header.component.ts:41:26:
+[37m      41 │         this.themeService.[32mtoggleSidebarTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleHideSidebarTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/header/header.component.ts:45:26:
+[37m      45 │         this.themeService.[32mtoggleHideSidebarTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/header/header.component.ts:49:26:
+[37m      49 │         this.themeService.[32mtoggleCardBorderTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleHeaderTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/header/header.component.ts:53:26:
+[37m      53 │         this.themeService.[32mtoggleHeaderTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderRadiusTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/header/header.component.ts:57:26:
+[37m      57 │         this.themeService.[32mtoggleCardBorderRadiusTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isSidebarDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/sidebar/sidebar.component.html:4:39:
+[37m      4 │     [class.dark-sidebar]="themeService.[32misSidebarDark[37m()"
+        ╵                                        [32m~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component SidebarComponent.
+
+    src/app/common/sidebar/sidebar.component.ts:12:17:
+[37m      12 │     templateUrl: [32m'./sidebar.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isRightSidebar' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/sidebar/sidebar.component.html:5:40:
+[37m      5 │     [class.right-sidebar]="themeService.[32misRightSidebar[37m()"
+        ╵                                         [32m~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component SidebarComponent.
+
+    src/app/common/sidebar/sidebar.component.ts:12:17:
+[37m      12 │     templateUrl: [32m'./sidebar.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isHideSidebar' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/sidebar/sidebar.component.html:6:39:
+[37m      6 │     [class.hide-sidebar]="themeService.[32misHideSidebar[37m()"
+        ╵                                        [32m~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component SidebarComponent.
+
+    src/app/common/sidebar/sidebar.component.ts:12:17:
+[37m      12 │     templateUrl: [32m'./sidebar.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleSidebarTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/sidebar/sidebar.component.ts:35:26:
+[37m      35 │         this.themeService.[32mtoggleSidebarTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleHideSidebarTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/common/sidebar/sidebar.component.ts:39:26:
+[37m      39 │         this.themeService.[32mtoggleHideSidebarTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/analytics-activity/analytics-activity.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component AnalyticsActivityComponent.
+
+    src/app/dashboard/analytics/analytics-activity/analytics-activity.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./analytics-activity.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/analytics-activity/analytics-activity.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component AnalyticsActivityComponent.
+
+    src/app/dashboard/analytics/analytics-activity/analytics-activity.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./analytics-activity.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/analytics-gender/analytics-gender.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component AnalyticsGenderComponent.
+
+    src/app/dashboard/analytics/analytics-gender/analytics-gender.component.ts:25:17:
+[37m      25 │     templateUrl: [32m'./analytics-gender.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/analytics-gender/analytics-gender.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component AnalyticsGenderComponent.
+
+    src/app/dashboard/analytics/analytics-gender/analytics-gender.component.ts:25:17:
+[37m      25 │     templateUrl: [32m'./analytics-gender.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/analytics-language/analytics-language.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component AnalyticsLanguageComponent.
+
+    src/app/dashboard/analytics/analytics-language/analytics-language.component.ts:25:17:
+[37m      25 │     templateUrl: [32m'./analytics-language.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/analytics-language/analytics-language.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component AnalyticsLanguageComponent.
+
+    src/app/dashboard/analytics/analytics-language/analytics-language.component.ts:25:17:
+[37m      25 │     templateUrl: [32m'./analytics-language.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/analytics-status/analytics-status.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component AnalyticsStatusComponent.
+
+    src/app/dashboard/analytics/analytics-status/analytics-status.component.ts:42:17:
+[37m      42 │     templateUrl: [32m'./analytics-status.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/analytics-status/analytics-status.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component AnalyticsStatusComponent.
+
+    src/app/dashboard/analytics/analytics-status/analytics-status.component.ts:42:17:
+[37m      42 │     templateUrl: [32m'./analytics-status.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/analytics-total-revenue/analytics-total-revenue.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component AnalyticsTotalRevenueComponent.
+
+    src/app/dashboard/analytics/analytics-total-revenue/analytics-total-revenue.component.ts:25:17:
+[37m      25 │     templateUrl: [32m'./analytics-total-revenue.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/analytics-total-revenue/analytics-total-revenue.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component AnalyticsTotalRevenueComponent.
+
+    src/app/dashboard/analytics/analytics-total-revenue/analytics-total-revenue.component.ts:25:17:
+[37m      25 │     templateUrl: [32m'./analytics-total-revenue.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/browser-used-traffic-reports/browser-used-traffic-reports.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component BrowserUsedTrafficReportsComponent.
+
+    src/app/dashboard/analytics/browser-used-traffic-reports/browser-used-traffic-reports.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./browser-used-traffic-reports.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/browser-used-traffic-reports/browser-used-traffic-reports.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component BrowserUsedTrafficReportsComponent.
+
+    src/app/dashboard/analytics/browser-used-traffic-reports/browser-used-traffic-reports.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./browser-used-traffic-reports.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/new-vs-returing/new-vs-returing.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component NewVsReturingComponent.
+
+    src/app/dashboard/analytics/new-vs-returing/new-vs-returing.component.ts:25:17:
+[37m      25 │     templateUrl: [32m'./new-vs-returing.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/new-vs-returing/new-vs-returing.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component NewVsReturingComponent.
+
+    src/app/dashboard/analytics/new-vs-returing/new-vs-returing.component.ts:25:17:
+[37m      25 │     templateUrl: [32m'./new-vs-returing.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/sessions-device/sessions-device.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component SessionsDeviceComponent.
+
+    src/app/dashboard/analytics/sessions-device/sessions-device.component.ts:25:17:
+[37m      25 │     templateUrl: [32m'./sessions-device.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/sessions-device/sessions-device.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component SessionsDeviceComponent.
+
+    src/app/dashboard/analytics/sessions-device/sessions-device.component.ts:25:17:
+[37m      25 │     templateUrl: [32m'./sessions-device.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/terminals/terminals.component.html:1:92:
+[37m      1 │ ...x tagus-card" [class.component-dark-theme]="themeService.[32misDark[37m()">
+        ╵                                                             [32m~~~~~~[0m
+
+  Error occurs in the template of component TerminalsComponent.
+
+    src/app/dashboard/analytics/terminals/terminals.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./terminals.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/visitors-age/visitors-age.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component VisitorsAgeComponent.
+
+    src/app/dashboard/analytics/visitors-age/visitors-age.component.ts:25:17:
+[37m      25 │     templateUrl: [32m'./visitors-age.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/visitors-age/visitors-age.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component VisitorsAgeComponent.
+
+    src/app/dashboard/analytics/visitors-age/visitors-age.component.ts:25:17:
+[37m      25 │     templateUrl: [32m'./visitors-age.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/welcome-dashboard/welcome-dashboard.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component WelcomeDashboardComponent.
+
+    src/app/dashboard/analytics/welcome-dashboard/welcome-dashboard.component.ts:43:17:
+[37m      43 │     templateUrl: [32m'./welcome-dashboard.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorder' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/welcome-dashboard/welcome-dashboard.component.html:4:45:
+[37m      4 │     [class.card-borderd-theme]="themeService.[32misCardBorder[37m()"
+        ╵                                              [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component WelcomeDashboardComponent.
+
+    src/app/dashboard/analytics/welcome-dashboard/welcome-dashboard.component.ts:43:17:
+[37m      43 │     templateUrl: [32m'./welcome-dashboard.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isCardBorderRadius' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/welcome-dashboard/welcome-dashboard.component.html:5:45:
+[37m      5 │     [class.card-border-radius]="themeService.[32misCardBorderRadius[37m()"
+        ╵                                              [32m~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component WelcomeDashboardComponent.
+
+    src/app/dashboard/analytics/welcome-dashboard/welcome-dashboard.component.ts:43:17:
+[37m      43 │     templateUrl: [32m'./welcome-dashboard.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/welcome-dashboard/welcome-dashboard.component.html:6:48:
+[37m      6 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component WelcomeDashboardComponent.
+
+    src/app/dashboard/analytics/welcome-dashboard/welcome-dashboard.component.ts:43:17:
+[37m      43 │     templateUrl: [32m'./welcome-dashboard.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/welcome-dashboard/welcome-dashboard.component.ts:53:26:
+[37m      53 │         this.themeService.[32mtoggleCardBorderTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'toggleCardBorderRadiusTheme' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/analytics/welcome-dashboard/welcome-dashboard.component.ts:57:26:
+[37m      57 │         this.themeService.[32mtoggleCardBorderRadiusTheme[37m();
+         ╵                           [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/crypto/crypto-my-profile/crypto-my-profile.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component CryptoMyProfileComponent.
+
+    src/app/dashboard/crypto/crypto-my-profile/crypto-my-profile.component.ts:33:17:
+[37m      33 │     templateUrl: [32m'./crypto-my-profile.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/crypto/current-rate/current-rate.component.html:3:48:
+[37m      3 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component CurrentRateComponent.
+
+    src/app/dashboard/crypto/current-rate/current-rate.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./current-rate.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/crypto/market-graph/market-graph.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component MarketGraphComponent.
+
+    src/app/dashboard/crypto/market-graph/market-graph.component.ts:45:17:
+[37m      45 │     templateUrl: [32m'./market-graph.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/crypto/market-graph/market-graph.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component MarketGraphComponent.
+
+    src/app/dashboard/crypto/market-graph/market-graph.component.ts:45:17:
+[37m      45 │     templateUrl: [32m'./market-graph.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/crypto/my-currencies/my-currencies.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component MyCurrenciesComponent.
+
+    src/app/dashboard/crypto/my-currencies/my-currencies.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./my-currencies.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/crypto/my-currencies/my-currencies.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component MyCurrenciesComponent.
+
+    src/app/dashboard/crypto/my-currencies/my-currencies.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./my-currencies.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/crypto/order-activities/order-activities.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component OrderActivitiesComponent.
+
+    src/app/dashboard/crypto/order-activities/order-activities.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./order-activities.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/crypto/order-activities/order-activities.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component OrderActivitiesComponent.
+
+    src/app/dashboard/crypto/order-activities/order-activities.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./order-activities.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/crypto/trading/trading.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component TradingComponent.
+
+    src/app/dashboard/crypto/trading/trading.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./trading.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/crypto/trading/trading.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component TradingComponent.
+
+    src/app/dashboard/crypto/trading/trading.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./trading.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/crypto/user-activities/user-activities.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component UserActivitiesComponent.
+
+    src/app/dashboard/crypto/user-activities/user-activities.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./user-activities.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/ecommerce/best-selling-products/best-selling-products.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component BestSellingProductsComponent.
+
+    src/app/dashboard/ecommerce/best-selling-products/best-selling-products.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./best-selling-products.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/ecommerce/best-selling-products/best-selling-products.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component BestSellingProductsComponent.
+
+    src/app/dashboard/ecommerce/best-selling-products/best-selling-products.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./best-selling-products.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/ecommerce/ecommerce-activity-timeline/ecommerce-activity-timeline.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component EcommerceActivityTimelineComponent.
+
+    src/app/dashboard/ecommerce/ecommerce-activity-timeline/ecommerce-activity-timeline.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./ecommerce-activity-timeline.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/ecommerce/ecommerce-activity-timeline/ecommerce-activity-timeline.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component EcommerceActivityTimelineComponent.
+
+    src/app/dashboard/ecommerce/ecommerce-activity-timeline/ecommerce-activity-timeline.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./ecommerce-activity-timeline.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/ecommerce/ecommerce-impressions/ecommerce-impressions.component.html:3:48:
+[37m      3 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component EcommerceImpressionsComponent.
+
+    src/app/dashboard/ecommerce/ecommerce-impressions/ecommerce-impressions.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./ecommerce-impressions.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/ecommerce/ecommerce-ratings/ecommerce-ratings.component.html:3:48:
+[37m      3 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component EcommerceRatingsComponent.
+
+    src/app/dashboard/ecommerce/ecommerce-ratings/ecommerce-ratings.component.ts:37:17:
+[37m      37 │     templateUrl: [32m'./ecommerce-ratings.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/ecommerce/new-customers/new-customers.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component NewCustomersComponent.
+
+    src/app/dashboard/ecommerce/new-customers/new-customers.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./new-customers.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/ecommerce/new-customers/new-customers.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component NewCustomersComponent.
+
+    src/app/dashboard/ecommerce/new-customers/new-customers.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./new-customers.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/help-desk/agent-performance/agent-performance.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component AgentPerformanceComponent.
+
+    src/app/dashboard/help-desk/agent-performance/agent-performance.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./agent-performance.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/help-desk/agent-performance/agent-performance.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component AgentPerformanceComponent.
+
+    src/app/dashboard/help-desk/agent-performance/agent-performance.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./agent-performance.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/help-desk/average-time-call/average-time-call.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component AverageTimeCallComponent.
+
+    src/app/dashboard/help-desk/average-time-call/average-time-call.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./average-time-call.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/help-desk/average-time-call/average-time-call.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component AverageTimeCallComponent.
+
+    src/app/dashboard/help-desk/average-time-call/average-time-call.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./average-time-call.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/help-desk/hd-activity/hd-activity.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component HdActivityComponent.
+
+    src/app/dashboard/help-desk/hd-activity/hd-activity.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./hd-activity.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/help-desk/hd-activity/hd-activity.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component HdActivityComponent.
+
+    src/app/dashboard/help-desk/hd-activity/hd-activity.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./hd-activity.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/help-desk/hd-stats/hd-stats.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component HdStatsComponent.
+
+    src/app/dashboard/help-desk/hd-stats/hd-stats.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./hd-stats.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/help-desk/support-status/support-status.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component SupportStatusComponent.
+
+    src/app/dashboard/help-desk/support-status/support-status.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./support-status.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/help-desk/support-status/support-status.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component SupportStatusComponent.
+
+    src/app/dashboard/help-desk/support-status/support-status.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./support-status.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/help-desk/tickets-status/tickets-status.component.html:3:48:
+[37m      3 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component TicketsStatusComponent.
+
+    src/app/dashboard/help-desk/tickets-status/tickets-status.component.ts:41:17:
+[37m      41 │     templateUrl: [32m'./tickets-status.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/lms-courses/lms-course-completion/lms-course-completion.component.html:3:48:
+[37m      3 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component LmsCourseCompletionComponent.
+
+    src/app/dashboard/lms-courses/lms-course-completion/lms-course-completion.component.ts:31:17:
+[37m      31 │     templateUrl: [32m'./lms-course-completion.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/lms-courses/lms-instructors/lms-instructors.component.html:3:48:
+[37m      3 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component LmsInstructorsComponent.
+
+    src/app/dashboard/lms-courses/lms-instructors/lms-instructors.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./lms-instructors.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/lms-courses/lms-messages/lms-messages.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component LmsMessagesComponent.
+
+    src/app/dashboard/lms-courses/lms-messages/lms-messages.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./lms-messages.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/lms-courses/lms-messages/lms-messages.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component LmsMessagesComponent.
+
+    src/app/dashboard/lms-courses/lms-messages/lms-messages.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./lms-messages.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/lms-courses/lms-planning/lms-planning.component.html:3:48:
+[37m      3 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component LmsPlanningComponent.
+
+    src/app/dashboard/lms-courses/lms-planning/lms-planning.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./lms-planning.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/lms-courses/lms-status/lms-status.component.html:3:48:
+[37m      3 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component LmsStatusComponent.
+
+    src/app/dashboard/lms-courses/lms-status/lms-status.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./lms-status.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/lms-courses/lms-students/lms-students.component.html:3:48:
+[37m      3 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component LmsStudentsComponent.
+
+    src/app/dashboard/lms-courses/lms-students/lms-students.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./lms-students.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/project-management/completed-tasks/completed-tasks.component.html:3:48:
+[37m      3 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component CompletedTasksComponent.
+
+    src/app/dashboard/project-management/completed-tasks/completed-tasks.component.ts:38:17:
+[37m      38 │     templateUrl: [32m'./completed-tasks.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/project-management/pm-activity-timeline/pm-activity-timeline.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component PmActivityTimelineComponent.
+
+    src/app/dashboard/project-management/pm-activity-timeline/pm-activity-timeline.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./pm-activity-timeline.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/project-management/pm-activity-timeline/pm-activity-timeline.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component PmActivityTimelineComponent.
+
+    src/app/dashboard/project-management/pm-activity-timeline/pm-activity-timeline.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./pm-activity-timeline.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/project-management/pm-all-projects/pm-all-projects.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component PmAllProjectsComponent.
+
+    src/app/dashboard/project-management/pm-all-projects/pm-all-projects.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./pm-all-projects.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/project-management/pm-all-projects/pm-all-projects.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component PmAllProjectsComponent.
+
+    src/app/dashboard/project-management/pm-all-projects/pm-all-projects.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./pm-all-projects.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/project-management/pm-team-members/pm-team-members.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component PmTeamMembersComponent.
+
+    src/app/dashboard/project-management/pm-team-members/pm-team-members.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./pm-team-members.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/project-management/pm-team-members/pm-team-members.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component PmTeamMembersComponent.
+
+    src/app/dashboard/project-management/pm-team-members/pm-team-members.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./pm-team-members.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/project-management/pm-total-users/pm-total-users.component.html:3:48:
+[37m      3 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component PmTotalUsersComponent.
+
+    src/app/dashboard/project-management/pm-total-users/pm-total-users.component.ts:31:17:
+[37m      31 │     templateUrl: [32m'./pm-total-users.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/project-management/tasks-performance/tasks-performance.component.html:3:48:
+[37m      3 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component TasksPerformanceComponent.
+
+    src/app/dashboard/project-management/tasks-performance/tasks-performance.component.ts:27:17:
+[37m      27 │     templateUrl: [32m'./tasks-performance.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/saas-app/milestones-overview/milestones-overview.component.html:3:48:
+[37m      3 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component MilestonesOverviewComponent.
+
+    src/app/dashboard/saas-app/milestones-overview/milestones-overview.component.ts:31:17:
+[37m      31 │     templateUrl: [32m'./milestones-overview.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/saas-app/sa-all-projects/sa-all-projects.component.html:1:95:
+[37m      1 │ ...projects-box" [class.component-dark-theme]="themeService.[32misDark[37m()">
+        ╵                                                             [32m~~~~~~[0m
+
+  Error occurs in the template of component SaAllProjectsComponent.
+
+    src/app/dashboard/saas-app/sa-all-projects/sa-all-projects.component.ts:12:17:
+[37m      12 │     templateUrl: [32m'./sa-all-projects.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/saas-app/sa-completed-tasks/sa-completed-tasks.component.html:3:48:
+[37m      3 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component SaCompletedTasksComponent.
+
+    src/app/dashboard/saas-app/sa-completed-tasks/sa-completed-tasks.component.ts:38:17:
+[37m      38 │     templateUrl: [32m'./sa-completed-tasks.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/saas-app/sa-messages/sa-messages.component.html:3:47:
+[37m      3 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+        ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component SaMessagesComponent.
+
+    src/app/dashboard/saas-app/sa-messages/sa-messages.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./sa-messages.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/saas-app/sa-messages/sa-messages.component.html:4:48:
+[37m      4 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component SaMessagesComponent.
+
+    src/app/dashboard/saas-app/sa-messages/sa-messages.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./sa-messages.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/saas-app/sa-sales-analytics/sa-sales-analytics.component.html:1:79:
+[37m      1 │ ...-card" [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()">
+        ╵                                                       [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component SaSalesAnalyticsComponent.
+
+    src/app/dashboard/saas-app/sa-sales-analytics/sa-sales-analytics.component.ts:41:17:
+[37m      41 │     templateUrl: [32m'./sa-sales-analytics.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/dashboard/saas-app/sa-tasks-performance/sa-tasks-performance.component.html:3:48:
+[37m      3 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+        ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component SaTasksPerformanceComponent.
+
+    src/app/dashboard/saas-app/sa-tasks-performance/sa-tasks-performance.component.ts:27:17:
+[37m      27 │     templateUrl: [32m'./sa-tasks-performance.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/accordion/accordion.component.html:19:65:
+[37m      19 │ ...card-content [class.component-dark-theme]="themeService.[32misDark[37m()">
+         ╵                                                            [32m~~~~~~[0m
+
+  Error occurs in the template of component AccordionComponent.
+
+    src/app/ui-kit/accordion/accordion.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./accordion.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/buttons/buttons.component.html:15:61:
+[37m      15 │ ..."row" [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()">
+         ╵                                                      [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component ButtonsComponent.
+
+    src/app/ui-kit/buttons/buttons.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./buttons.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/carousels/carousels.component.html:15:61:
+[37m      15 │ ..."row" [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()">
+         ╵                                                      [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component CarouselsComponent.
+
+    src/app/ui-kit/carousels/carousels.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./carousels.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/drag-drop/connected-sorting-dd/connected-sorting-dd.component.html:1:60:
+[37m      1 │ <div class="row" [class.component-dark-theme]="themeService.[32misDark[37m()">
+        ╵                                                             [32m~~~~~~[0m
+
+  Error occurs in the template of component ConnectedSortingDdComponent.
+
+    src/app/ui-kit/drag-drop/connected-sorting-dd/connected-sorting-dd.component.ts:8:17:
+[37m      8 │     templateUrl: [32m'./connected-sorting-dd.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/drag-drop/drag-drop.component.html:19:65:
+[37m      19 │ ...card-content [class.component-dark-theme]="themeService.[32misDark[37m()">
+         ╵                                                            [32m~~~~~~[0m
+
+  Error occurs in the template of component DragDropComponent.
+
+    src/app/ui-kit/drag-drop/drag-drop.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./drag-drop.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/drag-drop/drag-drop.component.html:30:65:
+[37m      30 │ ...card-content [class.component-dark-theme]="themeService.[32misDark[37m()">
+         ╵                                                            [32m~~~~~~[0m
+
+  Error occurs in the template of component DragDropComponent.
+
+    src/app/ui-kit/drag-drop/drag-drop.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./drag-drop.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/listbox/listbox.component.html:17:47:
+[37m      17 │     [class.component-dark-theme]="themeService.[32misDark[37m()"
+         ╵                                                [32m~~~~~~[0m
+
+  Error occurs in the template of component ListboxComponent.
+
+    src/app/ui-kit/listbox/listbox.component.ts:8:17:
+[37m      8 │     templateUrl: [32m'./listbox.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/listbox/listbox.component.html:18:48:
+[37m      18 │     [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()"
+         ╵                                                 [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component ListboxComponent.
+
+    src/app/ui-kit/listbox/listbox.component.ts:8:17:
+[37m      8 │     templateUrl: [32m'./listbox.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/sidenav/drawer-ebs/drawer-ebs.component.html:1:125:
+[37m      1 │ ...ckdrop.value" [class.component-dark-theme]="themeService.[32misDark[37m()">
+        ╵                                                             [32m~~~~~~[0m
+
+  Error occurs in the template of component DrawerEbsComponent.
+
+    src/app/ui-kit/sidenav/drawer-ebs/drawer-ebs.component.ts:13:17:
+[37m      13 │     templateUrl: [32m'./drawer-ebs.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/sidenav/sidenav.component.html:19:65:
+[37m      19 │ ...card-content [class.component-dark-theme]="themeService.[32misDark[37m()">
+         ╵                                                            [32m~~~~~~[0m
+
+  Error occurs in the template of component SidenavComponent.
+
+    src/app/ui-kit/sidenav/sidenav.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./sidenav.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/spacing/spacing.component.html:15:99:
+[37m      15 │ ... tagus-card" [class.component-dark-theme]="themeService.[32misDark[37m()">
+         ╵                                                            [32m~~~~~~[0m
+
+  Error occurs in the template of component SpacingComponent.
+
+    src/app/ui-kit/spacing/spacing.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./spacing.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/table/expandable-rows-table/expandable-rows-table.component.html:1:73:
+[37m      1 │ ...elevation-z8" [class.component-dark-theme]="themeService.[32misDark[37m()">
+        ╵                                                             [32m~~~~~~[0m
+
+  Error occurs in the template of component ExpandableRowsTableComponent.
+
+    src/app/ui-kit/table/expandable-rows-table/expandable-rows-table.component.ts:11:17:
+[37m      11 │     templateUrl: [32m'./expandable-rows-table.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/table/sticky-columns-table/sticky-columns-table.component.html:1:108:
+[37m      1 │ ... tabindex="0" [class.component-dark-theme]="themeService.[32misDark[37m()">
+        ╵                                                             [32m~~~~~~[0m
+
+  Error occurs in the template of component StickyColumnsTableComponent.
+
+    src/app/ui-kit/table/sticky-columns-table/sticky-columns-table.component.ts:9:17:
+[37m      9 │     templateUrl: [32m'./sticky-columns-table.component.html'[37m,
+        ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'isDark' does not exist on type 'CustomizerSettingsService'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/table/styling-columns-table/styling-columns-table.component.html:1:73:
+[37m      1 │ ...elevation-z8" [class.component-dark-theme]="themeService.[32misDark[37m()">
+        ╵                                                             [32m~~~~~~[0m
+
+  Error occurs in the template of component StylingColumnsTableComponent.
+
+    src/app/ui-kit/table/styling-columns-table/styling-columns-table.component.ts:27:17:
+[37m      27 │     templateUrl: [32m'./styling-columns-table.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/tabs/tabs.component.html:15:79:
+[37m      15 │ ...card" [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()">
+         ╵                                                      [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component TabsComponent.
+
+    src/app/ui-kit/tabs/tabs.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./tabs.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/tabs/tabs.component.html:28:79:
+[37m      28 │ ...card" [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()">
+         ╵                                                      [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component TabsComponent.
+
+    src/app/ui-kit/tabs/tabs.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./tabs.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/tabs/tabs.component.html:62:79:
+[37m      62 │ ...card" [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()">
+         ╵                                                      [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component TabsComponent.
+
+    src/app/ui-kit/tabs/tabs.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./tabs.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/tabs/tabs.component.html:75:79:
+[37m      75 │ ...card" [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()">
+         ╵                                                      [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component TabsComponent.
+
+    src/app/ui-kit/tabs/tabs.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./tabs.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/tabs/tabs.component.html:100:79:
+[37m      100 │ ...ard" [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()">
+          ╵                                                     [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component TabsComponent.
+
+    src/app/ui-kit/tabs/tabs.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./tabs.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/tabs/tabs.component.html:113:79:
+[37m      113 │ ...ard" [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()">
+          ╵                                                     [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component TabsComponent.
+
+    src/app/ui-kit/tabs/tabs.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./tabs.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'isRTLEnabled' does not exist on type 'CustomizerSettingsService'. Did you mean 'isRtlEnabled$'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/ui-kit/tabs/tabs.component.html:133:79:
+[37m      133 │ ...ard" [class.component-rtl-enabled]="themeService.[32misRTLEnabled[37m()">
+          ╵                                                     [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component TabsComponent.
+
+    src/app/ui-kit/tabs/tabs.component.ts:10:17:
+[37m      10 │     templateUrl: [32m'./tabs.component.html'[37m,
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[39m[22m

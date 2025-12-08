@@ -1,0 +1,14 @@
+<ng-container *ngIf="!isAuthPage">
+    <app-sidebar></app-sidebar>
+
+    <div class="main-content-area" [class.active]="toggleService.isToggled$ | async">
+        <app-header></app-header>
+        
+        <div class="main-content-container">
+            <router-outlet></router-outlet>
+            <app-footer></app-footer>
+        </div>
+    </div>
+</ng-container>
+
+<router-outlet *ngIf="isAuthPage"></router-outlet>
