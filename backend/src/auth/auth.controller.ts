@@ -43,7 +43,8 @@ export class AuthController {
     const frontendUrl = this.configService.get('FRONTEND_URL') || 'http://localhost:4200';
 
     if (result && result.access_token) {
-      res.redirect(`${frontendUrl}/authentication/login?token=${result.access_token}`);
+      const name = result.user ? encodeURIComponent(result.user.name) : 'User';
+      res.redirect(`${frontendUrl}/authentication/login?token=${result.access_token}&name=${name}`);
     } else {
       res.redirect(`${frontendUrl}/authentication/login?error=auth_failed`);
     }
@@ -60,7 +61,8 @@ export class AuthController {
     const frontendUrl = this.configService.get('FRONTEND_URL') || 'http://localhost:4200';
 
     if (result && result.access_token) {
-      res.redirect(`${frontendUrl}/authentication/login?token=${result.access_token}`);
+      const name = result.user ? encodeURIComponent(result.user.name) : 'User';
+      res.redirect(`${frontendUrl}/authentication/login?token=${result.access_token}&name=${name}`);
     } else {
       res.redirect(`${frontendUrl}/authentication/login?error=auth_failed`);
     }

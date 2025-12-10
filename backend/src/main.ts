@@ -6,13 +6,15 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.setGlobalPrefix('api');
   app.enableCors(
-    // {
-    //   origin: [
-    //     'http://localhost:4200',           // Angular dev server
-    //     'https://your-production-domain.com', // add your real frontend URL later
-    //   ],
-    //   credentials: true, // important if you use cookies/auth
-    // }
+    {
+      origin: 'http://localhost:4200', // Allow Angular client
+      credentials: true, // Important for session/cookie usage
+      //   origin: [
+      //     'http://localhost:4200',           // Angular dev server
+      //     'https://your-production-domain.com', // add your real frontend URL later
+      //   ],
+      //   credentials: true, // important if you use cookies/auth
+    }
   ); // This allows Angular (4200) to call Nest (3000)
   await app.listen(process.env.PORT ?? 3000);
 }

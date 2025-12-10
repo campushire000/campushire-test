@@ -42,7 +42,8 @@ export class LoginComponent implements OnInit {
         // Check for token from social login redirect
         this.route.queryParams.subscribe(params => {
             if (params['token']) {
-                this.authService.setSession({ access_token: params['token'], user: {} }); // We might need to fetch user details if not provided
+                const name = params['name'] || 'User';
+                this.authService.setSession({ access_token: params['token'], user: { name } });
                 this.router.navigate(['/']); // Redirect to dashboard
             } else if (params['error']) {
                 this.error = 'Authentication failed';
