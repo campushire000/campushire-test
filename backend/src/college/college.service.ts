@@ -1,67 +1,54 @@
-import { Injectable, OnModuleInit, NotFoundException } from '@nestjs/common';
-import { College } from './college.interface';
+import { Injectable, NotFoundException } from '@nestjs/common';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
+import { College, CollegeDocument } from './schemas/college.schema';
 import { CreateCollegeDto } from './dto/create-college.dto';
 import { UpdateCollegeDto } from './dto/update-college.dto';
-import * as fs from 'fs';
-import * as path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 
 @Injectable()
-export class CollegeService implements OnModuleInit {
-  private colleges: College[] = [];
-  private readonly filePath = path.join(__dirname, 'colleges.json');
+export class CollegeService {
+  constructor(
+    @InjectModel(College.name) private collegeModel: Model<CollegeDocument>,
+  ) { }
 
-  onModuleInit() {
-    this.loadColleges();
+  async findAll(): Promise<College[]> {
+    return this.collegeModel.find().exec();
   }
 
-  private loadColleges() {
-    try {
-      const data = fs.readFileSync(this.filePath, 'utf8');
-      this.colleges = JSON.parse(data);
-      console.log(`Loaded ${this.colleges.length} colleges from ${this.filePath}`);
-    } catch (error) {
-      console.error('Error loading colleges.json:', error);
-      this.colleges = [];
-    }
-  }
-
-  findAll(): College[] {
-    return this.colleges;
-  }
-
-  findOne(id: string): College {
-    const college = this.colleges.find((c) => c._id === id);
+  async findOne(id: string): Promise<College> {
+    const college = await this.collegeModel.findById(id).exec();
     if (!college) {
       throw new NotFoundException(`College with ID ${id} not found`);
     }
     return college;
   }
 
-  create(createCollegeDto: CreateCollegeDto): College {
-    const newCollege: College = {
+  async create(createCollegeDto: CreateCollegeDto): Promise<College> {
+    const newCollege = new this.collegeModel({
       _id: uuidv4(),
       ...createCollegeDto,
-    };
-    this.colleges.push(newCollege);
-    return newCollege;
+    });
+    return newCollege.save();
   }
 
-  update(id: string, updateCollegeDto: UpdateCollegeDto): College {
-    const index = this.colleges.findIndex((c) => c._id === id);
-    if (index === -1) {
+  async update(id: string, updateCollegeDto: UpdateCollegeDto): Promise<College> {
+    const updatedCollege = await this.collegeModel.findByIdAndUpdate(
+      id,
+      updateCollegeDto,
+      { new: true }
+    ).exec();
+
+    if (!updatedCollege) {
       throw new NotFoundException(`College with ID ${id} not found`);
     }
-    const updatedCollege = { ...this.colleges[index], ...updateCollegeDto };
-    this.colleges[index] = updatedCollege;
     return updatedCollege;
   }
 
-  remove(id: string): void {
-    const index = this.colleges.findIndex((c) => c._id === id);
-    if (index === -1) {
+  async remove(id: string): Promise<void> {
+    const result = await this.collegeModel.findByIdAndDelete(id).exec();
+    if (!result) {
       throw new NotFoundException(`College with ID ${id} not found`);
     }
-    this.colleges.splice(index, 1);
   }
 }

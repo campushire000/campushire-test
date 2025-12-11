@@ -9,7 +9,7 @@ import {
 } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
-import type { User } from './users.service';
+import { User } from './schemas/user.schema';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { RolesGuard } from '../auth/guards/roles.guard';
 import { Roles } from '../auth/decorators/roles.decorator';
@@ -21,7 +21,7 @@ export class UsersController {
 
   @Get()
   @Roles('admin') // Only admin can list all users
-  findAll(): User[] {
+  async findAll(): Promise<User[]> {
     return this.usersService.findAll();
   }
 

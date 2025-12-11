@@ -2,34 +2,34 @@ import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common'
 import { CompanyService } from './company.service';
 import { CreateCompanyDto } from './dto/create-company.dto';
 import { UpdateCompanyDto } from './dto/update-company.dto';
-import type { Company } from './company.interface';
+import { Company } from './schemas/company.schema';
 
 @Controller('companies')
 export class CompanyController {
-  constructor(private readonly companyService: CompanyService) {}
+  constructor(private readonly companyService: CompanyService) { }
 
   @Post()
-  create(@Body() createCompanyDto: CreateCompanyDto): Company {
+  async create(@Body() createCompanyDto: CreateCompanyDto): Promise<Company> {
     return this.companyService.create(createCompanyDto);
   }
 
   @Get()
-  findAll(): Company[] {
+  async findAll(): Promise<Company[]> {
     return this.companyService.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string): Company {
+  async findOne(@Param('id') id: string): Promise<Company> {
     return this.companyService.findOne(id);
   }
 
   @Put(':id')
-  update(@Param('id') id: string, @Body() updateCompanyDto: UpdateCompanyDto): Company {
+  async update(@Param('id') id: string, @Body() updateCompanyDto: UpdateCompanyDto): Promise<Company> {
     return this.companyService.update(id, updateCompanyDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string): void {
+  async remove(@Param('id') id: string): Promise<void> {
     return this.companyService.remove(id);
   }
 }

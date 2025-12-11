@@ -42,9 +42,22 @@ export class LoginComponent implements OnInit {
         // Check for token from social login redirect
         this.route.queryParams.subscribe(params => {
             if (params['token']) {
-                const name = params['name'] || 'User';
-                this.authService.setSession({ access_token: params['token'], user: { name } });
-                this.router.navigate(['/']); // Redirect to dashboard
+                const token = params['token'];
+                try {
+                    const payload = JSON.parse(atob(token.split('.')[1]));
+                    const user = {
+                        _id: payload.sub,
+                        email: payload.email,
+                        name: payload.name,
+                        role: payload.role,
+                        picture: null // Picture might not be in payload, we can safely omit or set null
+                    };
+                    this.authService.setSession({ access_token: token, user: user });
+                    this.router.navigate(['/']); // Redirect to dashboard
+                } catch (e) {
+                    console.error('Error decoding token', e);
+                    this.error = 'Authentication failed';
+                }
             } else if (params['error']) {
                 this.error = 'Authentication failed';
             }

@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist/frontend" }
+    },
+    {
+      "src": "backend/api/index.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/backend/api/index.ts" },
+    { "src": "/(favicon\\.ico|assets/.*|static/.*|robots\\.txt)", "dest": "/frontend/dist/frontend/$1" },
+    { "src": "/(.*)", "dest": "/frontend/dist/frontend/index.html" }
+  ]
+}

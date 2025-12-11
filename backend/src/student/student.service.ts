@@ -1,72 +1,59 @@
-import { Injectable, OnModuleInit, NotFoundException } from '@nestjs/common';
-import { Student } from './student.interface';
+import { Injectable, NotFoundException } from '@nestjs/common';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
+import { Student, StudentDocument } from './schemas/student.schema';
 import { CreateStudentDto } from './dto/create-student.dto';
 import { UpdateStudentDto } from './dto/update-student.dto';
-import * as fs from 'fs';
-import * as path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 
 @Injectable()
-export class StudentService implements OnModuleInit {
-  private students: Student[] = [];
-  private readonly filePath = path.join(__dirname, 'students.json');
+export class StudentService {
+  constructor(
+    @InjectModel(Student.name) private studentModel: Model<StudentDocument>,
+  ) { }
 
-  onModuleInit() {
-    this.loadStudents();
+  async findAll(): Promise<Student[]> {
+    return this.studentModel.find().exec();
   }
 
-  private loadStudents() {
-    try {
-      const data = fs.readFileSync(this.filePath, 'utf8');
-      this.students = JSON.parse(data);
-      console.log(`Loaded ${this.students.length} students from ${this.filePath}`);
-    } catch (error) {
-      console.error('Error loading students.json:', error);
-      this.students = [];
-    }
-  }
-
-  findAll(): Student[] {
-    return this.students;
-  }
-
-  findOne(id: string): Student {
-    const student = this.students.find((s) => s._id === id);
+  async findOne(id: string): Promise<Student> {
+    const student = await this.studentModel.findById(id).exec();
     if (!student) {
       throw new NotFoundException(`Student with ID ${id} not found`);
     }
     return student;
   }
 
-  findByCollegeId(collegeId: string): Student[] {
-    return this.students.filter((s) => s.college_id === collegeId);
+  async findByCollegeId(collegeId: string): Promise<Student[]> {
+    return this.studentModel.find({ college_id: collegeId }).exec();
   }
 
-  create(createStudentDto: CreateStudentDto): Student {
-    const newStudent: Student = {
+  async create(createStudentDto: CreateStudentDto): Promise<Student> {
+    const newStudent = new this.studentModel({
       _id: uuidv4(),
       ...createStudentDto,
       active: createStudentDto.active ?? true,
-    };
-    this.students.push(newStudent);
-    return newStudent;
+    });
+    return newStudent.save();
   }
 
-  update(id: string, updateStudentDto: UpdateStudentDto): Student {
-    const index = this.students.findIndex((s) => s._id === id);
-    if (index === -1) {
+  async update(id: string, updateStudentDto: UpdateStudentDto): Promise<Student> {
+    const updatedStudent = await this.studentModel.findByIdAndUpdate(
+      id,
+      updateStudentDto,
+      { new: true }
+    ).exec();
+
+    if (!updatedStudent) {
       throw new NotFoundException(`Student with ID ${id} not found`);
     }
-    const updatedStudent = { ...this.students[index], ...updateStudentDto };
-    this.students[index] = updatedStudent;
     return updatedStudent;
   }
 
-  remove(id: string): void {
-    const index = this.students.findIndex((s) => s._id === id);
-    if (index === -1) {
+  async remove(id: string): Promise<void> {
+    const result = await this.studentModel.findByIdAndDelete(id).exec();
+    if (!result) {
       throw new NotFoundException(`Student with ID ${id} not found`);
     }
-    this.students.splice(index, 1);
   }
 }

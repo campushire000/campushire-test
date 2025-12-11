@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToggleService } from './toggle.service';
-import { NgClass, DatePipe } from '@angular/common';
+import { NgClass, DatePipe, TitleCasePipe } from '@angular/common';
 import { CustomizerSettingsService } from '../../customizer-settings/customizer-settings.service';
 import { RouterLink } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
@@ -10,7 +10,7 @@ import { AuthService } from '../../authentication/auth.service';
 
 @Component({
     selector: 'app-header',
-    imports: [RouterLink, NgClass, MatMenuModule, MatIconModule, MatButtonModule, DatePipe],
+    imports: [RouterLink, NgClass, MatMenuModule, MatIconModule, MatButtonModule, DatePipe, TitleCasePipe],
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss']
 })
@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
     isToggled = false;
     currentDate: Date;
     user: any = null;
-    
+
     constructor(
         private toggleService: ToggleService,
         public themeService: CustomizerSettingsService,

@@ -2,34 +2,34 @@ import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common'
 import { CollegeService } from './college.service';
 import { CreateCollegeDto } from './dto/create-college.dto';
 import { UpdateCollegeDto } from './dto/update-college.dto';
-import type { College } from './college.interface';
+import { College } from './schemas/college.schema';
 
 @Controller('colleges')
 export class CollegeController {
-  constructor(private readonly collegeService: CollegeService) {}
+  constructor(private readonly collegeService: CollegeService) { }
 
   @Post()
-  create(@Body() createCollegeDto: CreateCollegeDto): College {
+  async create(@Body() createCollegeDto: CreateCollegeDto): Promise<College> {
     return this.collegeService.create(createCollegeDto);
   }
 
   @Get()
-  findAll(): College[] {
+  async findAll(): Promise<College[]> {
     return this.collegeService.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string): College {
+  async findOne(@Param('id') id: string): Promise<College> {
     return this.collegeService.findOne(id);
   }
 
   @Put(':id')
-  update(@Param('id') id: string, @Body() updateCollegeDto: UpdateCollegeDto): College {
+  async update(@Param('id') id: string, @Body() updateCollegeDto: UpdateCollegeDto): Promise<College> {
     return this.collegeService.update(id, updateCollegeDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string): void {
+  async remove(@Param('id') id: string): Promise<void> {
     return this.collegeService.remove(id);
   }
 }
