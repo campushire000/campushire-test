@@ -3,7 +3,6 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { User, UserDocument } from './schemas/user.schema';
-import { v4 as uuidv4 } from 'uuid';
 import * as bcrypt from 'bcrypt';
 
 @Injectable()
@@ -12,8 +11,25 @@ export class UsersService {
     @InjectModel(User.name) private userModel: Model<UserDocument>,
   ) { }
 
-  async findAll(): Promise<User[]> {
-    return this.userModel.find().exec();
+  async findAll(user?: any): Promise<User[]> {
+    if (user && user.role === 'admin') {
+      return this.userModel.find()
+        .populate('college', 'college_name')
+        .populate('group_ids', 'college_name')
+        .exec();
+    } else if (user && user.role === 'staff') {
+      const groups = user.group_ids || [];
+      return this.userModel.find({
+        $or: [
+          { college: { $in: groups } },
+          { group_ids: { $in: groups } }
+        ]
+      })
+        .populate('college', 'college_name')
+        .populate('group_ids', 'college_name')
+        .exec();
+    }
+    return [];
   }
 
   async findOne(email: string): Promise<User | undefined> {
@@ -32,21 +48,17 @@ export class UsersService {
     const hashedPassword = createUserDto.password ? await bcrypt.hash(createUserDto.password, salt) : undefined;
 
     const createdUser = new this.userModel({
-      _id: uuidv4(),
       ...createUserDto,
       password: hashedPassword,
-      status: 1,
+      status: true,
       role: createUserDto.role || 'student',
       __v: 0
     });
     return createdUser.save();
   }
 
-  async update(user: any): Promise<User> {
-    // Assuming user object has _id or email to identify
-    // If user is Mongoose Document, we can use save, but here we likely receive a plain object or DTO
-    const filter = user._id ? { _id: user._id } : { email: user.email };
-    const updated = await this.userModel.findOneAndUpdate(filter, user, { new: true }).exec();
+  async update(id: string, updateUserDto: any): Promise<User> {
+    const updated = await this.userModel.findByIdAndUpdate(id, updateUserDto, { new: true }).exec();
     if (!updated) {
       throw new NotFoundException('User not found');
     }

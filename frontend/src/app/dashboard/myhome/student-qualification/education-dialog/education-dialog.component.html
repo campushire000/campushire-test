@@ -1,0 +1,58 @@
+<h2 mat-dialog-title>{{ isEditMode ? 'Edit' : 'Add' }} Education</h2>
+<mat-dialog-content>
+    <form [formGroup]="educationForm" class="d-flex flex-column gap-2 mt-2">
+        <mat-form-field appearance="outline">
+            <mat-label>Degree</mat-label>
+            <input matInput formControlName="degree" placeholder="e.g. Bachelor's">
+            <mat-error *ngIf="educationForm.get('degree')?.hasError('required')">Degree is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Institute Name</mat-label>
+            <input matInput formControlName="institute_name" placeholder="e.g. University of Technology">
+            <mat-error *ngIf="educationForm.get('institute_name')?.hasError('required')">Institute is
+                required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Field of Study</mat-label>
+            <input matInput formControlName="field_of_study" placeholder="e.g. Computer Science">
+            <mat-error *ngIf="educationForm.get('field_of_study')?.hasError('required')">Field is required</mat-error>
+        </mat-form-field>
+
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Start Year</mat-label>
+                    <input matInput formControlName="start_year" placeholder="YYYY">
+                    <mat-error *ngIf="educationForm.get('start_year')?.hasError('pattern')">Format: YYYY</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>End Year</mat-label>
+                    <input matInput formControlName="end_year" placeholder="YYYY">
+                    <mat-error *ngIf="educationForm.get('end_year')?.hasError('pattern')">Format: YYYY</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+
+
+        <mat-form-field appearance="outline">
+            <mat-label>Grade</mat-label>
+            <input matInput formControlName="grade" placeholder="e.g. A, 3.8 GPA">
+            <mat-error *ngIf="educationForm.get('grade')?.hasError('required')">Grade is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Description</mat-label>
+            <textarea matInput formControlName="description" rows="3"></textarea>
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-raised-button color="primary" [disabled]="educationForm.invalid" (click)="onSubmit()">
+        {{ isEditMode ? 'Update' : 'Add' }}
+    </button>
+</mat-dialog-actions>

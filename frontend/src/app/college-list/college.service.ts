@@ -6,7 +6,7 @@ import { environment } from '../../environments/environment';
 
 export interface College {
   _id?: string;
-  status: number;
+  status: boolean;
   college_name: string;
   email: string;
   college_type: string;
@@ -20,7 +20,7 @@ export interface College {
   contact_person_name?: string;
   about?: string;
   address_line?: string;
-  cro_id?: string;
+
 }
 
 @Injectable({
@@ -32,6 +32,7 @@ export class CollegeService {
   constructor(private http: HttpClient) { }
 
   getColleges(): Observable<College[]> {
+    console.log('Fetching colleges from:', this.apiUrl);
     return this.http.get<College[]>(this.apiUrl);
   }
 

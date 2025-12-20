@@ -1,0 +1,95 @@
+<div *ngIf="student">
+    <mat-card class="student-qualification-card mb-25 border-radius d-block bg-white border-0 shadow-none">
+        <mat-card-header>
+            <mat-card-title>
+                <h5 class="mb-0 fw-bold">
+                    Education Qualification
+                </h5>
+            </mat-card-title>
+            <mat-card-subtitle>
+                <button mat-button color="primary" (click)="addEducation()">
+                    <mat-icon>add</mat-icon> Add Education
+                </button>
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="table-responsive d-none d-lg-block"
+                *ngIf="student.educations && student.educations.length > 0; else noEdu">
+                <table mat-table [dataSource]="dataSource" cdkDropList (cdkDropListDropped)="drop($event)">
+
+                    <!-- Degree Column -->
+                    <ng-container matColumnDef="degree">
+                        <th mat-header-cell *matHeaderCellDef class="fw-bold"> Degree </th>
+                        <td mat-cell *matCellDef="let element"> {{element.degree}} </td>
+                    </ng-container>
+
+                    <!-- Institute Column -->
+                    <ng-container matColumnDef="institute">
+                        <th mat-header-cell *matHeaderCellDef class="fw-bold"> Institute </th>
+                        <td mat-cell *matCellDef="let element"> {{element.institute_name}} </td>
+                    </ng-container>
+
+                    <!-- Field Column -->
+                    <ng-container matColumnDef="field">
+                        <th mat-header-cell *matHeaderCellDef class="fw-bold"> Field of Study </th>
+                        <td mat-cell *matCellDef="let element"> {{element.field_of_study}} </td>
+                    </ng-container>
+
+                    <!-- Year Column -->
+                    <ng-container matColumnDef="year">
+                        <th mat-header-cell *matHeaderCellDef class="fw-bold"> Year </th>
+                        <td mat-cell *matCellDef="let element"> {{element.start_year}} - {{element.end_year}} </td>
+                    </ng-container>
+
+                    <!-- Grade Column -->
+                    <ng-container matColumnDef="grade">
+                        <th mat-header-cell *matHeaderCellDef class="fw-bold"> Grade </th>
+                        <td mat-cell *matCellDef="let element"> {{element.grade}} </td>
+                    </ng-container>
+
+                    <!-- Action Column -->
+                    <ng-container matColumnDef="action">
+                        <th mat-header-cell *matHeaderCellDef class="fw-bold text-end"> Action </th>
+                        <td mat-cell *matCellDef="let element" class="text-end">
+                            <button mat-icon-button color="primary" class="edit-btn" (click)="openEditDialog(element)">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button color="warn" class="delete-btn" (click)="deleteEducation(element)">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                            <button mat-icon-button class="drag-handle" cdkDragHandle>
+                                <mat-icon>drag_handle</mat-icon>
+                            </button>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;" cdkDrag></tr>
+                </table>
+            </div>
+
+            <!-- Mobile View -->
+            <div class="d-block d-lg-none" *ngIf="student.educations && student.educations.length > 0">
+                <div class="mobile-card" *ngFor="let element of student.educations">
+                    <p><strong>Degree:</strong> {{element.degree}}</p>
+                    <p><strong>Institute:</strong> {{element.institute_name}}</p>
+                    <p><strong>Field:</strong> {{element.field_of_study}}</p>
+                    <p><strong>Year:</strong> {{element.start_year}} - {{element.end_year}}</p>
+                    <p><strong>Grade:</strong> {{element.grade}}</p>
+                    <div class="actions text-end">
+                        <button mat-icon-button color="primary" class="edit-btn" (click)="openEditDialog(element)">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button color="warn" class="delete-btn" (click)="deleteEducation(element)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <ng-template #noEdu>
+                <p class="text-muted">No education details available.</p>
+            </ng-template>
+        </mat-card-content>
+    </mat-card>
+
+</div>

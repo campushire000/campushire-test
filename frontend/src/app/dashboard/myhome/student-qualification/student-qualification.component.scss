@@ -1,0 +1,62 @@
+.student-qualification-card {
+    .mat-card-header {
+        margin-bottom: 20px;
+
+        .mat-card-title {
+            .fw-bold {
+                font-size: 18px;
+            }
+        }
+    }
+
+    table {
+        width: 100%;
+
+        th.mat-header-cell {
+            font-size: 14px;
+            color: #2b2b2b;
+        }
+
+        td.mat-cell {
+            font-size: 14px;
+            color: #5B5B98;
+        }
+    }
+
+    .edit-btn {
+        height: 35px;
+        width: 35px;
+        line-height: 35px;
+
+        .mat-icon {
+            font-size: 18px;
+            width: 18px;
+            height: 18px;
+            line-height: 18px;
+        }
+    }
+
+    .mobile-card {
+        background: #f9f9f9;
+        border: 1px solid #eeeeee;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 15px;
+
+        p {
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #5B5B98;
+
+            strong {
+                color: #2b2b2b;
+            }
+        }
+
+        .actions {
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+    }
+}

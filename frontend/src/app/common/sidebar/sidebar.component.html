@@ -27,13 +27,13 @@
                         </mat-expansion-panel-header>
                         <ul class="sidebar-sub-menu">
                             <li class="sidemenu-item">
-                                <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-                                    class="sidemenu-link">
-                                    eCommerce
+                                <a routerLink="/dashboard/myhome" routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    My Home
                                 </a>
                             </li>
                             <li class="sidemenu-item">
-                                <a routerLink="/analytics" routerLinkActive="active"
+                                <a routerLink="/dashboard/analytics" routerLinkActive="active"
                                     [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
                                     Analytics
                                 </a>
@@ -147,22 +147,22 @@
 
                     </a>
                     <a routerLink="/students" class="sidebar-menu-link" routerLinkActive="active"
-                        [routerLinkActiveOptions]="{exact: true}">
+                        [routerLinkActiveOptions]="{exact: true}" *ngIf="role !== 'student'">
                         <i class="flaticon-user-1"></i>
                         <span class="title">Students</span>
                     </a>
                     <a routerLink="/colleges" class="sidebar-menu-link" routerLinkActive="active"
-                        [routerLinkActiveOptions]="{exact: true}">
+                        [routerLinkActiveOptions]="{exact: true}" *ngIf="role !== 'student'">
                         <i class="flaticon-user-1"></i>
                         <span class="title">Colleges</span>
                     </a>
                     <a routerLink="/companies" class="sidebar-menu-link" routerLinkActive="active"
-                        [routerLinkActiveOptions]="{exact: true}">
+                        [routerLinkActiveOptions]="{exact: true}" *ngIf="role !== 'student'">
                         <i class="flaticon-user-1"></i>
                         <span class="title">Companies</span>
                     </a>
                     <a routerLink="/users" class="sidebar-menu-link" routerLinkActive="active"
-                        [routerLinkActiveOptions]="{exact: true}">
+                        [routerLinkActiveOptions]="{exact: true}" *ngIf="role !== 'student'">
                         <i class="flaticon-user-1"></i>
                         <span class="title">Users</span>
                     </a>

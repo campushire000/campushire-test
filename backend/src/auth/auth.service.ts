@@ -2,6 +2,7 @@ import { Injectable, UnauthorizedException, NotFoundException } from '@nestjs/co
 import { UsersService } from '../users/users.service';
 import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
+import { CreateUserDto } from '../users/dto/create-user.dto';
 
 @Injectable()
 export class AuthService {
@@ -11,11 +12,25 @@ export class AuthService {
   ) { }
 
   async validateUser(email: string, pass: string): Promise<any> {
+    console.log(`[DEBUG] Validating user: ${email}`);
     const user = await this.usersService.findOne(email);
-    if (user && user.password && await bcrypt.compare(pass, user.password)) {
-      const userObj = (user as any).toObject ? (user as any).toObject() : user;
-      const { password, ...result } = userObj;
-      return result;
+    console.log(`[DEBUG] User found: ${!!user}`);
+
+    if (user && user.password) {
+      if (user.status === false) {
+        console.log(`[DEBUG] User is inactive.`);
+        throw new UnauthorizedException('User account is inactive');
+      }
+      console.log(`[DEBUG] Comparing password...`);
+      const isMatch = await bcrypt.compare(pass, user.password);
+      console.log(`[DEBUG] Password match: ${isMatch}`);
+      if (isMatch) {
+        const userObj = (user as any).toObject ? (user as any).toObject() : user;
+        const { password, ...result } = userObj;
+        return result;
+      }
+    } else {
+      console.log(`[DEBUG] User missing or no password.`);
     }
     return null;
   }
@@ -24,9 +39,20 @@ export class AuthService {
     // If user is a Mongoose document, convert to plain object
     const userObj = user.toObject ? user.toObject() : user;
 
+    if (userObj.status === false || userObj.status === 'false') {
+      console.log(`[DEBUG] User is inactive (login check).`);
+      throw new UnauthorizedException('User account is inactive');
+    }
+
     const role = userObj.role || 'student';
 
-    const payload = { email: userObj.email, sub: userObj._id, role: role, name: userObj.name };
+    const payload = {
+      email: userObj.email,
+      sub: userObj._id,
+      role: role,
+      name: userObj.name,
+      group_ids: userObj.group_ids
+    };
     return {
       access_token: this.jwtService.sign(payload),
       user: {
@@ -34,18 +60,19 @@ export class AuthService {
         email: userObj.email,
         name: userObj.name,
         role: role,
-        picture: userObj.picture
+        picture: userObj.picture,
+        group_ids: userObj.group_ids
       }
     };
   }
 
-  async register(user: any) {
+  async register(createUserDto: CreateUserDto) {
     // Check if user exists
-    const existingUser = await this.usersService.findOne(user.email);
+    const existingUser = await this.usersService.findOne(createUserDto.email);
     if (existingUser) {
       throw new UnauthorizedException('User already exists');
     }
-    return this.usersService.create(user);
+    return this.usersService.create(createUserDto);
   }
 
   async forgotPassword(email: string) {
@@ -64,19 +91,11 @@ export class AuthService {
     if (!foundUser) {
       throw new NotFoundException('User not found');
     }
-    // In a real app, we would verify the old password or a token here.
-    // Since this is an authenticated endpoint (JWT), we assume the user is valid.
-    // We need to update the password.
-    // Since UsersService.create handles hashing, we might need a specific update method or manually hash here.
-    // Let's manually hash for now as UsersService doesn't have an update method exposed yet.
 
     const salt = await bcrypt.genSalt();
     foundUser.password = await bcrypt.hash(newPassword, salt);
 
-    // We need to save the user. UsersService needs a save/update method.
-    // For now, we can use a workaround if saveUsers is private, but ideally we add an update method.
-    // Let's add an update method to UsersService.
-    await this.usersService.update(foundUser);
+    await this.usersService.update(foundUser._id, { password: foundUser.password });
 
     return { message: 'Password updated successfully' };
   }
@@ -94,8 +113,10 @@ export class AuthService {
         email: req.user.email,
         name: req.user.firstName + ' ' + req.user.lastName,
         googleId: req.user.googleId,
-        role: 'student' // Default role
-      });
+        role: 'student', // Default role
+        createdAt: new Date(),
+        group_ids: []
+      } as CreateUserDto);
     }
     return this.login(user);
   }
@@ -110,8 +131,10 @@ export class AuthService {
         email: req.user.email,
         name: req.user.firstName + ' ' + req.user.lastName,
         facebookId: req.user.facebookId,
-        role: 'student' // Default role
-      });
+        role: 'student', // Default role
+        createdAt: new Date(),
+        group_ids: []
+      } as CreateUserDto);
     }
     return this.login(user);
   }

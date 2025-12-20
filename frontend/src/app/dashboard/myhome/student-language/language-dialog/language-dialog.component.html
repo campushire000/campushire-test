@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>{{ data._id ? 'Edit' : 'Add' }} Language Skill</h2>
+<mat-dialog-content>
+    <form class="example-form">
+        <mat-form-field appearance="outline" class="w-100 mb-2">
+            <mat-label>Language</mat-label>
+            <input matInput [(ngModel)]="data.language" name="language" placeholder="e.g. English, Spanish" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="w-100 mb-2">
+            <mat-label>Proficiency</mat-label>
+            <mat-select [(ngModel)]="data.proficiency" name="proficiency" required>
+                <mat-option value="Basic">Basic</mat-option>
+                <mat-option value="Intermediate">Intermediate</mat-option>
+                <mat-option value="Advanced">Advanced</mat-option>
+                <mat-option value="Native">Native</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div class="mb-3">
+            <label class="d-block mb-2 fw-bold">Capabilities:</label>
+            <mat-checkbox [(ngModel)]="data.can_read" name="can_read" class="me-3">Read</mat-checkbox>
+            <mat-checkbox [(ngModel)]="data.can_write" name="can_write" class="me-3">Write</mat-checkbox>
+            <mat-checkbox [(ngModel)]="data.can_speak" name="can_speak">Speak</mat-checkbox>
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="data"
+        [disabled]="!data.language || !data.proficiency">Save</button>
+</mat-dialog-actions>

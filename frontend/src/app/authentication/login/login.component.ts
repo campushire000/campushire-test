@@ -10,11 +10,12 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { AuthService } from '../auth.service';
 import { CommonModule } from '@angular/common';
 import { environment } from '../../../environments/environment';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 @Component({
     selector: 'app-login',
     standalone: true,
-    imports: [RouterLink, MatButtonModule, MatFormFieldModule, MatInputModule, MatIconModule, MatCheckboxModule, ReactiveFormsModule, CommonModule],
+    imports: [RouterLink, MatButtonModule, MatFormFieldModule, MatInputModule, MatIconModule, MatCheckboxModule, ReactiveFormsModule, CommonModule, MatSnackBarModule],
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.scss']
 })
@@ -30,7 +31,8 @@ export class LoginComponent implements OnInit {
         private authService: AuthService,
         private router: Router,
         private route: ActivatedRoute,
-        private cdr: ChangeDetectorRef
+        private cdr: ChangeDetectorRef,
+        private snackBar: MatSnackBar
     ) {
         this.loginForm = this.fb.group({
             email: ['', [Validators.required, Validators.email]],
@@ -59,7 +61,18 @@ export class LoginComponent implements OnInit {
                     this.error = 'Authentication failed';
                 }
             } else if (params['error']) {
-                this.error = 'Authentication failed';
+                if (params['error'] === 'inactive') {
+                    const message = 'Your account is inactive. Please contact the administrator.';
+                    this.error = message;
+                    this.snackBar.open(message, 'Close', {
+                        duration: 5000,
+                        horizontalPosition: 'center',
+                        verticalPosition: 'bottom',
+                        panelClass: ['error-snackbar']
+                    });
+                } else {
+                    this.error = 'Authentication failed';
+                }
             }
         });
     }
@@ -71,7 +84,19 @@ export class LoginComponent implements OnInit {
                     this.router.navigate(['/']);
                 },
                 error: (err) => {
-                    this.error = 'Invalid credentials';
+                    let message = 'Invalid credentials';
+                    if (err.error && err.error.message === 'User account is inactive') {
+                        message = 'Your account is inactive. Please contact the administrator.';
+                    }
+
+                    this.error = message;
+                    this.snackBar.open(message, 'Close', {
+                        duration: 5000,
+                        horizontalPosition: 'center',
+                        verticalPosition: 'bottom',
+                        panelClass: ['error-snackbar'] // Optional, if you have styles, or just default
+                    });
+
                     console.error(err);
                     this.cdr.detectChanges();
                 }

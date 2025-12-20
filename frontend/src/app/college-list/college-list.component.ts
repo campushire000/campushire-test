@@ -56,7 +56,7 @@ export class CollegeListComponent implements OnInit, AfterViewInit {
     private dialog: MatDialog,
     private snackBar: MatSnackBar,
     public themeService: CustomizerSettingsService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.loadColleges();
@@ -173,8 +173,8 @@ export class CollegeListComponent implements OnInit, AfterViewInit {
   }
 
   toggleStatus(college: College) {
-    const newStatus = college.status === 1 ? 0 : 1;
-    const updatedCollege = { ...college, status: newStatus };
+    const newStatus = !college.status;
+    const updatedCollege: any = { status: newStatus };
     this.updateCollege(college._id!, updatedCollege);
   }
 }

@@ -1,0 +1,106 @@
+.student-language-card {
+    mat-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        mat-card-title {
+            h5 {
+                font-size: 18px;
+            }
+        }
+
+        mat-card-subtitle {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+
+    .table-responsive {
+        margin-bottom: 0;
+
+        table {
+            width: 100%;
+            white-space: nowrap;
+
+            th {
+                color: var(--blackColor);
+                font-size: 14px;
+                background-color: #f9f9f9;
+                padding: 15px 20px;
+            }
+
+            td {
+                color: var(--paragraphColor);
+                font-size: 14px;
+                padding: 15px 20px;
+                border-bottom: 1px solid #eeeeee;
+
+                .text-success {
+                    color: #28a745 !important;
+                    font-size: 20px;
+                    vertical-align: middle;
+                }
+
+                .text-muted {
+                    color: #6c757d !important;
+                    font-size: 20px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+.mobile-card {
+    background: #f9f9f9;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+
+    p {
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: var(--paragraphColor);
+
+        strong {
+            color: var(--blackColor);
+        }
+    }
+
+    .actions {
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+}
+
+.drag-handle {
+    cursor: move;
+    color: #777;
+}
+
+.cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+        0 8px 10px 1px rgba(0, 0, 0, 0.14),
+        0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}

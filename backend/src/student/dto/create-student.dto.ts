@@ -15,4 +15,7 @@ export class CreateStudentDto {
   pincode: string;
   about?: string;
   active: boolean;
+  skills?: string[];
+  profile_image?: string;
+  resume_url?: string;
 }

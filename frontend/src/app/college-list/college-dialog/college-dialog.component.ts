@@ -84,15 +84,10 @@ import { College } from '../college.service';
         </div>
 
         <div class="row">
-          <mat-form-field appearance="outline" class="col-6">
+          <mat-form-field appearance="outline" class="col-12">
             <mat-label>Contact Person Email</mat-label>
             <i matPrefix class="ri-mail-send-line" style="margin-left: 10px;"></i>
             <input matInput formControlName="contact_person_email" required email>
-          </mat-form-field>
-          <mat-form-field appearance="outline" class="col-6">
-            <mat-label>CRO ID</mat-label>
-            <i matPrefix class="ri-id-card-line" style="margin-left: 10px;"></i>
-            <input matInput formControlName="cro_id">
           </mat-form-field>
         </div>
 
@@ -203,14 +198,14 @@ export class CollegeDialogComponent {
       contact_person_name: [data.college?.contact_person_name || ''],
       contact_person_mobile: [data.college?.contact_person_mobile || '', Validators.required],
       contact_person_email: [data.college?.contact_person_email || '', [Validators.required, Validators.email]],
-      cro_id: [data.college?.cro_id || ''],
+
       address_line: [data.college?.address_line || ''],
       city: [data.college?.city || '', Validators.required],
       state: [data.college?.state || '', Validators.required],
       country: [data.college?.country || 'India', Validators.required],
       pincode: [data.college?.pincode || '', Validators.required],
       about: [data.college?.about || ''],
-      status: [data.college?.status ?? 1] // Default to active (1)
+      status: [data.college?.status ?? true] // Default to active (true)
     });
   }
 

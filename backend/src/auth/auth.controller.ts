@@ -3,6 +3,8 @@ import { ConfigService } from '@nestjs/config';
 import { AuthService } from './auth.service';
 import { AuthGuard } from '@nestjs/passport';
 
+import { CreateUserDto } from '../users/dto/create-user.dto';
+
 @Controller('auth')
 export class AuthController {
   constructor(
@@ -17,7 +19,7 @@ export class AuthController {
   }
 
   @Post('register')
-  async register(@Body() createUserDto: any) {
+  async register(@Body() createUserDto: CreateUserDto) {
     return this.authService.register(createUserDto);
   }
 
@@ -39,14 +41,23 @@ export class AuthController {
   @Get('google/callback')
   @UseGuards(AuthGuard('google'))
   async googleAuthRedirect(@Request() req, @Res() res) {
-    const result = await this.authService.googleLogin(req) as any;
     const frontendUrl = this.configService.get('FRONTEND_URL') || 'http://localhost:4200';
 
-    if (result && result.access_token) {
-      const name = result.user ? encodeURIComponent(result.user.name) : 'User';
-      res.redirect(`${frontendUrl}/authentication/login?token=${result.access_token}&name=${name}`);
-    } else {
-      res.redirect(`${frontendUrl}/authentication/login?error=auth_failed`);
+    try {
+      const result = await this.authService.googleLogin(req) as any;
+
+      if (result && result.access_token) {
+        const name = result.user ? encodeURIComponent(result.user.name) : 'User';
+        res.redirect(`${frontendUrl}/authentication/login?token=${result.access_token}&name=${name}`);
+      } else {
+        res.redirect(`${frontendUrl}/authentication/login?error=auth_failed`);
+      }
+    } catch (err: any) {
+      if (err.message === 'User account is inactive') {
+        res.redirect(`${frontendUrl}/authentication/login?error=inactive`);
+      } else {
+        res.redirect(`${frontendUrl}/authentication/login?error=auth_failed`);
+      }
     }
   }
 
@@ -57,14 +68,23 @@ export class AuthController {
   @Get('facebook/callback')
   @UseGuards(AuthGuard('facebook'))
   async facebookAuthRedirect(@Request() req, @Res() res) {
-    const result = await this.authService.facebookLogin(req) as any;
     const frontendUrl = this.configService.get('FRONTEND_URL') || 'http://localhost:4200';
 
-    if (result && result.access_token) {
-      const name = result.user ? encodeURIComponent(result.user.name) : 'User';
-      res.redirect(`${frontendUrl}/authentication/login?token=${result.access_token}&name=${name}`);
-    } else {
-      res.redirect(`${frontendUrl}/authentication/login?error=auth_failed`);
+    try {
+      const result = await this.authService.facebookLogin(req) as any;
+
+      if (result && result.access_token) {
+        const name = result.user ? encodeURIComponent(result.user.name) : 'User';
+        res.redirect(`${frontendUrl}/authentication/login?token=${result.access_token}&name=${name}`);
+      } else {
+        res.redirect(`${frontendUrl}/authentication/login?error=auth_failed`);
+      }
+    } catch (err: any) {
+      if (err.message === 'User account is inactive') {
+        res.redirect(`${frontendUrl}/authentication/login?error=inactive`);
+      } else {
+        res.redirect(`${frontendUrl}/authentication/login?error=auth_failed`);
+      }
     }
   }
 }

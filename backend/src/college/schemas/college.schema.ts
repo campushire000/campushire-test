@@ -4,13 +4,28 @@ import { Document } from 'mongoose';
 
 export type CollegeDocument = College & Document;
 
-@Schema()
-export class College {
-    @Prop({ type: String, required: true })
-    _id: string;
+import * as mongoose from 'mongoose';
 
-    @Prop({ default: 1 })
-    status: number;
+@Schema({ _id: false }) // helper schema
+export class Contact {
+    @Prop({ required: true })
+    person_name: string;
+
+    @Prop({ required: true })
+    person_email: string;
+
+    @Prop({ required: true })
+    person_mobile: string;
+}
+
+export const ContactSchema = SchemaFactory.createForClass(Contact);
+
+@Schema({ timestamps: true }) // Adds createdAt, updatedAt
+export class College {
+    // _id is auto-generated ObjectId
+
+    @Prop({ type: mongoose.Schema.Types.Mixed, default: true }) // Using Mixed to handle existing numbering safely, logically boolean
+    status: any;
 
     @Prop({ required: true })
     college_name: string;
@@ -33,26 +48,29 @@ export class College {
     @Prop()
     pincode: string;
 
-    @Prop()
-    contact_person_mobile: string;
+    @Prop({ type: ContactSchema })
+    contact: Contact;
 
     @Prop()
-    contact_person_email: string;
+    phone?: string; // Optional global phone, separate from contact person
 
     @Prop()
     website?: string;
 
     @Prop()
-    contact_person_name?: string;
-
-    @Prop()
     about?: string;
 
     @Prop()
-    address_line?: string;
+    address?: string; // Renamed from address_line
+
+
 
     @Prop()
-    cro_id?: string;
+    tenant_id?: string;
+
+    // Explicitly defining timestamps for TS if needed, usually handled by schema options
+    createdAt?: Date;
+    updatedAt?: Date;
 }
 
 export const CollegeSchema = SchemaFactory.createForClass(College);

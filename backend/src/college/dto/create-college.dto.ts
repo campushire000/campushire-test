@@ -1,5 +1,5 @@
 export class CreateCollegeDto {
-  status: number;
+  status: boolean;
   college_name: string;
   email: string;
   college_type: string;
@@ -13,5 +13,5 @@ export class CreateCollegeDto {
   contact_person_name?: string;
   about?: string;
   address_line?: string;
-  cro_id?: string;
+
 }

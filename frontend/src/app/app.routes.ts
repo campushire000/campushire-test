@@ -3,7 +3,7 @@ import { authGuard } from './core/guards/auth.guard';
 import { roleGuard } from './core/guards/role.guard';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'dashboard/analytics', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboard/myhome', pathMatch: 'full' },
   {
     path: 'access-denied',
     loadComponent: () => import('./access-denied/access-denied.component').then(m => m.AccessDeniedComponent)
@@ -15,6 +15,10 @@ export const routes: Routes = [
       {
         path: 'analytics',
         loadComponent: () => import('./dashboard/analytics/analytics.component').then(m => m.AnalyticsComponent)
+      },
+      {
+        path: 'myhome',
+        loadComponent: () => import('./dashboard/myhome/college-card.component').then(m => m.CollegeCardComponent)
       }
     ]
   },
@@ -26,14 +30,15 @@ export const routes: Routes = [
   {
     path: 'users',
     canActivate: [authGuard, roleGuard],
-    data: { roles: ['admin'] },
+    data: { roles: ['admin', 'staff'] },
     loadComponent: () => import('./users/users')
       .then(m => m.UsersComponent)
   },
 
   {
     path: 'colleges',
-    canActivate: [authGuard],
+    canActivate: [authGuard, roleGuard],
+    data: { roles: ['admin', 'staff'] },
     loadComponent: () => import('./college-list/college-list.component')
       .then(m => m.CollegeListComponent)
   },
@@ -70,5 +75,5 @@ export const routes: Routes = [
     path: 'authentication',
     loadChildren: () => import('./authentication/authentication.routes').then(m => m.routes)
   },
-  { path: '**', redirectTo: 'dashboard/analytics' }
+  { path: '**', redirectTo: 'dashboard/myhome' }
 ];

@@ -4,9 +4,11 @@ import { Document } from 'mongoose';
 
 export type UserDocument = User & Document;
 
-@Schema()
+import * as mongoose from 'mongoose';
+
+@Schema({ timestamps: true })
 export class User {
-    @Prop({ type: String, required: true })
+    // _id is automatically added by Mongoose, but we need to declare it for TS
     _id: string;
 
     @Prop()
@@ -18,7 +20,7 @@ export class User {
     @Prop()
     password?: string;
 
-    @Prop()
+    @Prop({ default: 'student' })
     role?: string;
 
     @Prop()
@@ -27,8 +29,20 @@ export class User {
     @Prop()
     facebookId?: string;
 
-    @Prop({ default: 1 })
-    status: number;
+    @Prop({ type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'College' }], default: [] })
+    group_ids: string[];
+
+    @Prop({ type: mongoose.Schema.Types.Mixed, default: true })
+    status: any;
+
+    @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'College' })
+    college?: string;
+
+    @Prop({ type: Date, default: Date.now })
+    createdAt: Date;
+
+    @Prop({ type: Date, default: Date.now })
+    updatedAt: Date;
 
     @Prop()
     category?: string;

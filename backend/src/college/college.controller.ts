@@ -1,10 +1,12 @@
-import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Delete, Put, UseGuards, Request } from '@nestjs/common';
 import { CollegeService } from './college.service';
 import { CreateCollegeDto } from './dto/create-college.dto';
 import { UpdateCollegeDto } from './dto/update-college.dto';
 import { College } from './schemas/college.schema';
+import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 
 @Controller('colleges')
+@UseGuards(JwtAuthGuard)
 export class CollegeController {
   constructor(private readonly collegeService: CollegeService) { }
 
@@ -14,8 +16,9 @@ export class CollegeController {
   }
 
   @Get()
-  async findAll(): Promise<College[]> {
-    return this.collegeService.findAll();
+  async findAll(@Request() req): Promise<College[]> {
+    console.log('[DEBUG] CollegeController.findAll User:', req.user);
+    return this.collegeService.findAll(req.user);
   }
 
   @Get(':id')
@@ -25,6 +28,7 @@ export class CollegeController {
 
   @Put(':id')
   async update(@Param('id') id: string, @Body() updateCollegeDto: UpdateCollegeDto): Promise<College> {
+    console.log(`[DEBUG] Update College Request - ID: ${id}`, updateCollegeDto);
     return this.collegeService.update(id, updateCollegeDto);
   }
 
