@@ -50,7 +50,7 @@ export class UserDialogComponent implements OnInit {
             email: [data.user?.email || '', [Validators.required, Validators.email]],
             password: [{ value: '', disabled: this.isSocialUser }], // Disabled if social user
             role: [data.user?.role || 'student', Validators.required],
-            college: [data.user?.college || ''], // Store ID
+
             group_ids: [data.user?.group_ids || []],
             status: [data.user?.status ?? true]
         });
@@ -62,6 +62,10 @@ export class UserDialogComponent implements OnInit {
         this.loadColleges();
 
         // Initial check
+        const currentUser = this.authService.getUser();
+        if (currentUser && currentUser.role === 'staff') {
+            this.form.get('role')?.disable();
+        }
         this.checkRole(this.form.get('role')?.value);
 
         // Listen for changes
@@ -80,15 +84,7 @@ export class UserDialogComponent implements OnInit {
 
         // Auto-fill college for students if adding new user or editing with empty college
         if (role === 'student') {
-            const currentUser = this.authService.getUser();
-            const collegeControl = this.form.get('college');
-
-            // Only auto-fill if currently empty and user has a college
-            if (currentUser && currentUser.college && !collegeControl?.value) {
-                // Handle both populated object and direct ID
-                const collegeId = currentUser.college._id || currentUser.college;
-                collegeControl?.setValue(collegeId);
-            }
+            // Logic removed as college field is deleted
         }
     }
 
@@ -107,9 +103,7 @@ export class UserDialogComponent implements OnInit {
                 delete formValue.password;
             }
             // Fix: cast empty string to null for ObjectId fields to avoid Mongoose CastError
-            if (!formValue.college) {
-                formValue.college = null;
-            }
+
             this.dialogRef.close(formValue);
         } else {
             this.form.markAllAsTouched();

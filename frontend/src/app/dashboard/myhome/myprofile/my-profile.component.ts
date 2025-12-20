@@ -145,9 +145,7 @@ export class MyProfileComponent implements OnInit {
                             student_name: user.name || '',
                             email: user.email || '',
                         });
-                        if (user.college && (user.college as any).university) {
-                            this.studentForm.patchValue({ university: (user.college as any).university });
-                        }
+
                         this.enableEdit();
                         this.cdr.detectChanges();
                     } else {
@@ -216,7 +214,7 @@ export class MyProfileComponent implements OnInit {
                 const newStudent: Student = {
                     ...formValues,
                     user_id: user._id,
-                    college_id: collegeId || (user.college?._id || user.college)
+                    college_id: collegeId
                 };
 
                 this.studentService.createStudent(newStudent)

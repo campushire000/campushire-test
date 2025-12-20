@@ -5,27 +5,33 @@ import { Model } from 'mongoose';
 import { User, UserDocument } from './schemas/user.schema';
 import * as bcrypt from 'bcrypt';
 
+import { Student, StudentDocument } from '../student/schemas/student.schema';
+
 @Injectable()
 export class UsersService {
   constructor(
     @InjectModel(User.name) private userModel: Model<UserDocument>,
+    @InjectModel(Student.name) private studentModel: Model<StudentDocument>,
   ) { }
 
   async findAll(user?: any): Promise<User[]> {
     if (user && user.role === 'admin') {
       return this.userModel.find()
-        .populate('college', 'college_name')
         .populate('group_ids', 'college_name')
         .exec();
     } else if (user && user.role === 'staff') {
       const groups = user.group_ids || [];
+
+      // Find students belonging to these colleges
+      const students = await this.studentModel.find({ college: { $in: groups } }).select('user').exec();
+      const studentUserIds = students.map(s => s.user);
+
       return this.userModel.find({
         $or: [
-          { college: { $in: groups } },
-          { group_ids: { $in: groups } }
+          { group_ids: { $in: groups } }, // Other staff/admins for these groups
+          { _id: { $in: studentUserIds } } // Students for these groups
         ]
       })
-        .populate('college', 'college_name')
         .populate('group_ids', 'college_name')
         .exec();
     }

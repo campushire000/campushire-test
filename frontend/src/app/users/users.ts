@@ -111,7 +111,7 @@ export class UsersComponent implements OnInit, AfterViewInit {
 
   getAssignedColleges(user: User): string[] {
     if (user.role === 'admin') return ['All'];
-    if (user.role === 'student') return [this.getCollegeName(user.college)];
+
     if (user.role === 'staff') return this.getGroupNames(user.group_ids);
     return ['-'];
   }

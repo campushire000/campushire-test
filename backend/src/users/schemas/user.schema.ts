@@ -35,8 +35,7 @@ export class User {
     @Prop({ type: mongoose.Schema.Types.Mixed, default: true })
     status: any;
 
-    @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'College' })
-    college?: string;
+
 
     @Prop({ type: Date, default: Date.now })
     createdAt: Date;

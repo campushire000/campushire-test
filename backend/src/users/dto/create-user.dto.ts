@@ -47,8 +47,5 @@ export class CreateUserDto {
   @IsDateString()
   updatedAt?: Date;
 
-  // --- PROPER FORMAT FOR OBJECT ID ---
-  @IsOptional()
-  @IsMongoId({ message: 'The college_id must be a valid MongoDB ObjectId' })
-  college?: string;
+
 }

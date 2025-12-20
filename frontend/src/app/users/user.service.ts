@@ -8,7 +8,7 @@ export interface User {
     name: string;
     email: string;
     role?: string;
-    college?: string | any; // ObjectId or populated object
+
     group_ids?: string[]; // IDs of assigned colleges
     status?: boolean;
     password?: string;
